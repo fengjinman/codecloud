@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <!--相当于自己定义日志的写法，不过目前还不会，以后再研究一下具体内容-->
+    <appender name="defined_name" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <Prudent>true</Prudent>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>logFile.%d{yyyy-MM-dd}.log</fileNamePattern>
+
+            <maxHistory>30</maxHistory>
+            <totalSizeCap>3GB</totalSizeCap>
+
+        </rollingPolicy>
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <Pattern> %d{yyyy-MM-dd HH:mm:ss} -%msg%n</Pattern>
+        </layout>
+        <encoder>
+            <pattern>%-4relative [%thread] %-5level %logger{35} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <include resource="org/springframework/boot/logging/logback/base.xml" />
+
+    <!--源码或者框架用info，已经足够详细了-->
+    <root level="info">
+        <appender-ref ref="CONSOLE" />
+        <appender-ref ref="FILE" />
+    </root>
+
+    <!-- 测试环境+开发环境. 多个使用逗号隔开. -->
+    <springProfile name="test,dev">
+        <!--源码或者框架用info，已经足够详细了-->
+        <logger name="org.springframework.web" level="info">
+        </logger>
+        <!--自己写的代码用最详细的debug级别，可以看见sql语句-->
+        <logger name="com.example" level="DEBUG" >
+            <appender-ref ref="defined_name"/>
+        </logger>
+    </springProfile>
+
+    <!-- 生产环境. -->
+    <springProfile name="prod">
+        <logger name="org.springframework.web" level="ERROR">
+            <appender-ref ref="FILE"/>
+        </logger>
+        <logger name="com.example" level="ERROR" />
+    </springProfile>
+    <!--日志小知识：springboot默认的日志级别是info 最详细的debug不会直接显示，需要配置才会有
+                   springboot已经集成了logback,只要选中web模块，就会有，不需要额外的依赖-->
+</configuration>
+
