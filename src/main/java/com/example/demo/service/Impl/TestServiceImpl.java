@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 /**
  * Created by fengjinman Administrator on 2018/8/23.
  */
-@Service("test")
+@Service
 public class TestServiceImpl implements TestService {
 
 

@@ -635,3 +635,11 @@
 24217 [http-nio-8080-exec-3] INFO  c.e.d.controller.MessageController - 电话号码列表：15201114824
 24218 [http-nio-8080-exec-3] INFO  c.e.d.controller.MessageController - 短信内容：000
 24218 [http-nio-8080-exec-3] INFO  c.e.d.controller.MessageController - 返回结果：re = Result(result=false, Reason=您的短信服务暂未开通，请联系云服务！)
+1040 [main] INFO  com.example.demo.DemoApplication - Starting DemoApplication on 8ZMYSDL10U6ZOIW with PID 17124 (F:\fengjinman\target\classes started by Administrator in F:\fengjinman)
+1045 [main] DEBUG com.example.demo.DemoApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+1046 [main] INFO  com.example.demo.DemoApplication - The following profiles are active: dev
+4749 [main] INFO  com.example.demo.DemoApplication - Started DemoApplication in 4.534 seconds (JVM running for 5.137)
+1202 [main] INFO  com.example.demo.DemoApplication - Starting DemoApplication on 8ZMYSDL10U6ZOIW with PID 15432 (F:\fengjinman\target\classes started by Administrator in F:\fengjinman)
+1207 [main] DEBUG com.example.demo.DemoApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+1208 [main] INFO  com.example.demo.DemoApplication - The following profiles are active: dev
+4473 [main] INFO  com.example.demo.DemoApplication - Started DemoApplication in 4.177 seconds (JVM running for 4.89)
