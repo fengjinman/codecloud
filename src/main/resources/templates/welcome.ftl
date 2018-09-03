@@ -5,7 +5,8 @@
     <title>Title</title>
 </head>
 <body>
-    welcome!
+    登陆成功！
+    welcome! ${user.username}
     <br>
     <a href="http://localhost:8080/message">群发短信</a>
 </body>

@@ -8,6 +8,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 /**
@@ -23,7 +24,7 @@ public class LoginController {
     UserService service;
 
     @RequestMapping("/login")
-    public String login(@RequestParam("username")String username,@RequestParam("password")String password){
+    public String login(@RequestParam("username")String username, @RequestParam("password")String password, ModelMap map){
 
         log.info("------有人登录------");
         log.info("username = "+username);
@@ -34,6 +35,7 @@ public class LoginController {
         Result re = service.checkUser(user);
         log.info("返回结果：re = "+re);
         if(re.getResult().equals(true)){
+            map.put("user",user);
             return "welcome";
         }else{
             return "index";

@@ -14,6 +14,8 @@ public class AsyncConfig {
 
     /**
      * 让每一个任务都自己一个线程
+     * 定时任务的配置
+     * 变量用注解从配置文件中获取
      */
     @Value("${corePoolSize}")
     private int corePoolSize;

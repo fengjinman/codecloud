@@ -1308,3 +1308,115 @@
 20324 [http-nio-8080-exec-1] INFO  c.e.d.service.Impl.UserServiceImpl - 返回结果：db_user = User(id=1, username=fengjinman, password=4edaaafbadba14ac81404398434fcf0e)
 20325 [http-nio-8080-exec-1] INFO  c.e.d.service.Impl.UserServiceImpl - -------登录成功------
 20325 [http-nio-8080-exec-1] INFO  c.e.demo.controller.LoginController - 返回结果：re = Result(result=true, Reason=null)
+684560 [restartedMain] INFO  com.example.demo.DemoApplication - Starting DemoApplication on PC-20180812CBGC with PID 3240 (E:\IdeaProjects\self001\target\classes started by Administrator in E:\IdeaProjects\self001)
+684561 [restartedMain] DEBUG com.example.demo.DemoApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+684561 [restartedMain] INFO  com.example.demo.DemoApplication - The following profiles are active: dev
+686615 [restartedMain] INFO  com.example.demo.DemoApplication - Started DemoApplication in 2.166 seconds (JVM running for 687.022)
+693333 [restartedMain] INFO  com.example.demo.DemoApplication - Starting DemoApplication on PC-20180812CBGC with PID 3240 (E:\IdeaProjects\self001\target\classes started by Administrator in E:\IdeaProjects\self001)
+693334 [restartedMain] DEBUG com.example.demo.DemoApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+693334 [restartedMain] INFO  com.example.demo.DemoApplication - The following profiles are active: dev
+694609 [restartedMain] INFO  com.example.demo.DemoApplication - Started DemoApplication in 1.349 seconds (JVM running for 695.016)
+699422 [restartedMain] INFO  com.example.demo.DemoApplication - Starting DemoApplication on PC-20180812CBGC with PID 3240 (E:\IdeaProjects\self001\target\classes started by Administrator in E:\IdeaProjects\self001)
+699423 [restartedMain] DEBUG com.example.demo.DemoApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+699423 [restartedMain] INFO  com.example.demo.DemoApplication - The following profiles are active: dev
+700768 [restartedMain] INFO  com.example.demo.DemoApplication - Started DemoApplication in 1.446 seconds (JVM running for 701.175)
+713068 [restartedMain] INFO  com.example.demo.DemoApplication - Starting DemoApplication on PC-20180812CBGC with PID 3240 (E:\IdeaProjects\self001\target\classes started by Administrator in E:\IdeaProjects\self001)
+713068 [restartedMain] DEBUG com.example.demo.DemoApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+713069 [restartedMain] INFO  com.example.demo.DemoApplication - The following profiles are active: dev
+714118 [restartedMain] INFO  com.example.demo.DemoApplication - Started DemoApplication in 1.191 seconds (JVM running for 714.524)
+752194 [restartedMain] INFO  com.example.demo.DemoApplication - Starting DemoApplication on PC-20180812CBGC with PID 3240 (E:\IdeaProjects\self001\target\classes started by Administrator in E:\IdeaProjects\self001)
+752195 [restartedMain] DEBUG com.example.demo.DemoApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+752195 [restartedMain] INFO  com.example.demo.DemoApplication - The following profiles are active: dev
+753397 [restartedMain] INFO  com.example.demo.DemoApplication - Started DemoApplication in 1.282 seconds (JVM running for 753.802)
+757959 [restartedMain] INFO  com.example.demo.DemoApplication - Starting DemoApplication on PC-20180812CBGC with PID 3240 (E:\IdeaProjects\self001\target\classes started by Administrator in E:\IdeaProjects\self001)
+757960 [restartedMain] DEBUG com.example.demo.DemoApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+757960 [restartedMain] INFO  com.example.demo.DemoApplication - The following profiles are active: dev
+759251 [restartedMain] INFO  com.example.demo.DemoApplication - Started DemoApplication in 1.488 seconds (JVM running for 759.657)
+763145 [restartedMain] INFO  com.example.demo.DemoApplication - Starting DemoApplication on PC-20180812CBGC with PID 3240 (E:\IdeaProjects\self001\target\classes started by Administrator in E:\IdeaProjects\self001)
+763145 [restartedMain] DEBUG com.example.demo.DemoApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+763146 [restartedMain] INFO  com.example.demo.DemoApplication - The following profiles are active: dev
+764293 [restartedMain] INFO  com.example.demo.DemoApplication - Started DemoApplication in 1.213 seconds (JVM running for 764.698)
+778156 [restartedMain] INFO  com.example.demo.DemoApplication - Starting DemoApplication on PC-20180812CBGC with PID 3240 (E:\IdeaProjects\self001\target\classes started by Administrator in E:\IdeaProjects\self001)
+778156 [restartedMain] DEBUG com.example.demo.DemoApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+778156 [restartedMain] INFO  com.example.demo.DemoApplication - The following profiles are active: dev
+779310 [restartedMain] INFO  com.example.demo.DemoApplication - Started DemoApplication in 1.212 seconds (JVM running for 779.715)
+839636 [http-nio-8080-exec-5] INFO  c.e.demo.controller.LoginController - ------有人登录------
+839638 [http-nio-8080-exec-5] INFO  c.e.demo.controller.LoginController - username = fengjinman
+839638 [http-nio-8080-exec-5] INFO  c.e.demo.controller.LoginController - password = dashuaige
+839638 [http-nio-8080-exec-5] INFO  c.e.d.service.Impl.UserServiceImpl - ------查询数据库-----
+839647 [http-nio-8080-exec-5] DEBUG c.e.demo.dao.UserDao.queryUser - ==>  Preparing: select * from user where username = ? 
+839647 [http-nio-8080-exec-5] DEBUG c.e.demo.dao.UserDao.queryUser - ==> Parameters: fengjinman(String)
+839649 [http-nio-8080-exec-5] DEBUG c.e.demo.dao.UserDao.queryUser - <==      Total: 1
+839649 [http-nio-8080-exec-5] INFO  c.e.d.service.Impl.UserServiceImpl - 返回结果：db_user = User(id=1, username=fengjinman, password=4edaaafbadba14ac81404398434fcf0e)
+839650 [http-nio-8080-exec-5] INFO  c.e.d.service.Impl.UserServiceImpl - -------登录成功------
+839651 [http-nio-8080-exec-5] INFO  c.e.demo.controller.LoginController - 返回结果：re = Result(result=true, Reason=null)
+952399 [restartedMain] INFO  com.example.demo.DemoApplication - Starting DemoApplication on PC-20180812CBGC with PID 3240 (E:\IdeaProjects\self001\target\classes started by Administrator in E:\IdeaProjects\self001)
+952400 [restartedMain] DEBUG com.example.demo.DemoApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+952400 [restartedMain] INFO  com.example.demo.DemoApplication - The following profiles are active: dev
+953750 [restartedMain] INFO  com.example.demo.DemoApplication - Started DemoApplication in 1.435 seconds (JVM running for 954.149)
+970860 [restartedMain] INFO  com.example.demo.DemoApplication - Starting DemoApplication on PC-20180812CBGC with PID 3240 (E:\IdeaProjects\self001\target\classes started by Administrator in E:\IdeaProjects\self001)
+970860 [restartedMain] DEBUG com.example.demo.DemoApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+970863 [restartedMain] INFO  com.example.demo.DemoApplication - The following profiles are active: dev
+972216 [restartedMain] INFO  com.example.demo.DemoApplication - Started DemoApplication in 1.432 seconds (JVM running for 972.615)
+1064795 [restartedMain] INFO  com.example.demo.DemoApplication - Starting DemoApplication on PC-20180812CBGC with PID 3240 (E:\IdeaProjects\self001\target\classes started by Administrator in E:\IdeaProjects\self001)
+1064795 [restartedMain] DEBUG com.example.demo.DemoApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+1064795 [restartedMain] INFO  com.example.demo.DemoApplication - The following profiles are active: dev
+1066112 [restartedMain] INFO  com.example.demo.DemoApplication - Started DemoApplication in 1.45 seconds (JVM running for 1066.507)
+1302 [restartedMain] INFO  com.example.demo.DemoApplication - Starting DemoApplication on PC-20180812CBGC with PID 1612 (E:\IdeaProjects\self001\target\classes started by Administrator in E:\IdeaProjects\self001)
+1304 [restartedMain] DEBUG com.example.demo.DemoApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+1306 [restartedMain] INFO  com.example.demo.DemoApplication - The following profiles are active: dev
+7582 [restartedMain] INFO  com.example.demo.DemoApplication - Started DemoApplication in 7.134 seconds (JVM running for 8.104)
+10953 [http-nio-8080-exec-4] INFO  c.e.demo.controller.LoginController - ------有人登录------
+10953 [http-nio-8080-exec-4] INFO  c.e.demo.controller.LoginController - username = fengjinman
+10953 [http-nio-8080-exec-4] INFO  c.e.demo.controller.LoginController - password = dashuaige
+10954 [http-nio-8080-exec-4] INFO  c.e.d.service.Impl.UserServiceImpl - ------查询数据库-----
+11221 [http-nio-8080-exec-4] DEBUG c.e.demo.dao.UserDao.queryUser - ==>  Preparing: select * from user where username = ? 
+11243 [http-nio-8080-exec-4] DEBUG c.e.demo.dao.UserDao.queryUser - ==> Parameters: fengjinman(String)
+11260 [http-nio-8080-exec-4] DEBUG c.e.demo.dao.UserDao.queryUser - <==      Total: 1
+11262 [http-nio-8080-exec-4] INFO  c.e.d.service.Impl.UserServiceImpl - 返回结果：db_user = User(id=1, username=fengjinman, password=4edaaafbadba14ac81404398434fcf0e)
+11264 [http-nio-8080-exec-4] INFO  c.e.d.service.Impl.UserServiceImpl - -------登录成功------
+11264 [http-nio-8080-exec-4] INFO  c.e.demo.controller.LoginController - 返回结果：re = Result(result=true, Reason=null)
+1278 [restartedMain] INFO  com.example.demo.DemoApplication - Starting DemoApplication on PC-20180812CBGC with PID 2736 (E:\IdeaProjects\self001\target\classes started by Administrator in E:\IdeaProjects\self001)
+1279 [restartedMain] DEBUG com.example.demo.DemoApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+1324 [restartedMain] INFO  com.example.demo.DemoApplication - The following profiles are active: dev
+6946 [restartedMain] INFO  com.example.demo.DemoApplication - Started DemoApplication in 6.487 seconds (JVM running for 7.362)
+13980 [http-nio-8080-exec-1] INFO  c.e.demo.controller.LoginController - ------有人登录------
+13981 [http-nio-8080-exec-1] INFO  c.e.demo.controller.LoginController - username = fengjinman
+13981 [http-nio-8080-exec-1] INFO  c.e.demo.controller.LoginController - password = dashuaige
+13981 [http-nio-8080-exec-1] INFO  c.e.d.service.Impl.UserServiceImpl - ------查询数据库-----
+14240 [http-nio-8080-exec-1] DEBUG c.e.demo.dao.UserDao.queryUser - ==>  Preparing: select * from user where username = ? 
+14264 [http-nio-8080-exec-1] DEBUG c.e.demo.dao.UserDao.queryUser - ==> Parameters: fengjinman(String)
+14279 [http-nio-8080-exec-1] DEBUG c.e.demo.dao.UserDao.queryUser - <==      Total: 1
+14281 [http-nio-8080-exec-1] INFO  c.e.d.service.Impl.UserServiceImpl - 返回结果：db_user = User(id=1, username=fengjinman, password=4edaaafbadba14ac81404398434fcf0e)
+14283 [http-nio-8080-exec-1] INFO  c.e.d.service.Impl.UserServiceImpl - -------登录成功------
+14283 [http-nio-8080-exec-1] INFO  c.e.demo.controller.LoginController - 返回结果：re = Result(result=true, Reason=null)
+38823 [http-nio-8080-exec-3] INFO  c.e.demo.controller.LoginController - ------有人登录------
+38824 [http-nio-8080-exec-3] INFO  c.e.demo.controller.LoginController - username = fengjinman
+38825 [http-nio-8080-exec-3] INFO  c.e.demo.controller.LoginController - password = dashuaige
+38825 [http-nio-8080-exec-3] INFO  c.e.d.service.Impl.UserServiceImpl - ------查询数据库-----
+38826 [http-nio-8080-exec-3] DEBUG c.e.demo.dao.UserDao.queryUser - ==>  Preparing: select * from user where username = ? 
+38827 [http-nio-8080-exec-3] DEBUG c.e.demo.dao.UserDao.queryUser - ==> Parameters: fengjinman(String)
+38829 [http-nio-8080-exec-3] DEBUG c.e.demo.dao.UserDao.queryUser - <==      Total: 1
+38830 [http-nio-8080-exec-3] INFO  c.e.d.service.Impl.UserServiceImpl - 返回结果：db_user = User(id=1, username=fengjinman, password=4edaaafbadba14ac81404398434fcf0e)
+38833 [http-nio-8080-exec-3] INFO  c.e.d.service.Impl.UserServiceImpl - -------登录成功------
+38833 [http-nio-8080-exec-3] INFO  c.e.demo.controller.LoginController - 返回结果：re = Result(result=true, Reason=null)
+58271 [http-nio-8080-exec-6] INFO  c.e.demo.controller.LoginController - ------有人登录------
+58272 [http-nio-8080-exec-6] INFO  c.e.demo.controller.LoginController - username = fengjinman
+58273 [http-nio-8080-exec-6] INFO  c.e.demo.controller.LoginController - password = dashuaige
+58273 [http-nio-8080-exec-6] INFO  c.e.d.service.Impl.UserServiceImpl - ------查询数据库-----
+58277 [http-nio-8080-exec-6] DEBUG c.e.demo.dao.UserDao.queryUser - ==>  Preparing: select * from user where username = ? 
+58278 [http-nio-8080-exec-6] DEBUG c.e.demo.dao.UserDao.queryUser - ==> Parameters: fengjinman(String)
+58281 [http-nio-8080-exec-6] DEBUG c.e.demo.dao.UserDao.queryUser - <==      Total: 1
+58284 [http-nio-8080-exec-6] INFO  c.e.d.service.Impl.UserServiceImpl - 返回结果：db_user = User(id=1, username=fengjinman, password=4edaaafbadba14ac81404398434fcf0e)
+58284 [http-nio-8080-exec-6] INFO  c.e.d.service.Impl.UserServiceImpl - -------登录成功------
+58285 [http-nio-8080-exec-6] INFO  c.e.demo.controller.LoginController - 返回结果：re = Result(result=true, Reason=null)
+60570 [http-nio-8080-exec-10] INFO  c.e.demo.controller.LoginController - ------有人登录------
+60575 [http-nio-8080-exec-10] INFO  c.e.demo.controller.LoginController - username = fengjinman
+60576 [http-nio-8080-exec-10] INFO  c.e.demo.controller.LoginController - password = dashuaige
+60577 [http-nio-8080-exec-10] INFO  c.e.d.service.Impl.UserServiceImpl - ------查询数据库-----
+60578 [http-nio-8080-exec-10] DEBUG c.e.demo.dao.UserDao.queryUser - ==>  Preparing: select * from user where username = ? 
+60579 [http-nio-8080-exec-10] DEBUG c.e.demo.dao.UserDao.queryUser - ==> Parameters: fengjinman(String)
+60581 [http-nio-8080-exec-10] DEBUG c.e.demo.dao.UserDao.queryUser - <==      Total: 1
+60582 [http-nio-8080-exec-10] INFO  c.e.d.service.Impl.UserServiceImpl - 返回结果：db_user = User(id=1, username=fengjinman, password=4edaaafbadba14ac81404398434fcf0e)
+60582 [http-nio-8080-exec-10] INFO  c.e.d.service.Impl.UserServiceImpl - -------登录成功------
+60582 [http-nio-8080-exec-10] INFO  c.e.demo.controller.LoginController - 返回结果：re = Result(result=true, Reason=null)

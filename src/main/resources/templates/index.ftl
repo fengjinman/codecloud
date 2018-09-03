@@ -9,6 +9,7 @@
 //        window.onload=function () {
 //            alert("你好，我是js");
 //        }
+        //改成ajax
     </script>
     <div align="center" style="margin-top: 300px">
         <form action="http://localhost:8080/login">
