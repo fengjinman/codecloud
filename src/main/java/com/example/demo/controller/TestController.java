@@ -1,9 +1,12 @@
 package com.example.demo.controller;
 
+import ch.qos.logback.core.net.SyslogOutputStream;
 import com.example.demo.dao.UserDao;
 import com.example.demo.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -41,9 +44,16 @@ public class TestController {
         map.put("kkkkk","ddddd");
         return map;
     }
+
+    @Value("${vv}")
+    private String vv;
+
     @RequestMapping("/page")
-    public String page(){
-        System.out.println("进来了");
-        return "index";
+    public String page(ModelMap map){
+        Date date = new Date();
+        System.out.println(vv);
+        System.out.print(date.toString());
+        map.addAttribute("vv",date.toString());
+        return "hello";
     }
 }

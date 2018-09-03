@@ -643,3 +643,668 @@
 1207 [main] DEBUG com.example.demo.DemoApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
 1208 [main] INFO  com.example.demo.DemoApplication - The following profiles are active: dev
 4473 [main] INFO  com.example.demo.DemoApplication - Started DemoApplication in 4.177 seconds (JVM running for 4.89)
+4049 [main] INFO  com.example.demo.DemoApplication - Starting DemoApplication on PC-20180812CBGC with PID 2516 (E:\IdeaProjects\self001\target\classes started by Administrator in E:\IdeaProjects\self001)
+4080 [main] DEBUG com.example.demo.DemoApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+4096 [main] INFO  com.example.demo.DemoApplication - The following profiles are active: dev
+15331 [main] INFO  com.example.demo.DemoApplication - Started DemoApplication in 14.433 seconds (JVM running for 16.466)
+199008 [http-nio-8080-exec-5] INFO  c.e.d.controller.RegistController - -------用户注册-------
+199010 [http-nio-8080-exec-5] INFO  c.e.d.controller.RegistController - username = fengjinman
+199010 [http-nio-8080-exec-5] INFO  c.e.d.controller.RegistController - password = dashuaige
+199292 [http-nio-8080-exec-5] DEBUG c.e.demo.dao.UserDao.queryUser - ==>  Preparing: select * from user where username = ? 
+199315 [http-nio-8080-exec-5] DEBUG c.e.demo.dao.UserDao.queryUser - ==> Parameters: fengjinman(String)
+199352 [http-nio-8080-exec-5] DEBUG c.e.demo.dao.UserDao.queryUser - <==      Total: 0
+199369 [http-nio-8080-exec-5] INFO  c.e.d.service.Impl.UserServiceImpl - ------可以注册-----
+199391 [http-nio-8080-exec-5] INFO  c.e.d.service.Impl.UserServiceImpl - ------加密完成-----
+199391 [http-nio-8080-exec-5] DEBUG c.e.demo.dao.UserDao.insertUser - ==>  Preparing: insert into user(username,password) values(?,?) 
+199392 [http-nio-8080-exec-5] DEBUG c.e.demo.dao.UserDao.insertUser - ==> Parameters: fengjinman(String), 4edaaafbadba14ac81404398434fcf0e(String)
+199432 [http-nio-8080-exec-5] DEBUG c.e.demo.dao.UserDao.insertUser - <==    Updates: 1
+199434 [http-nio-8080-exec-5] INFO  c.e.d.service.Impl.UserServiceImpl - ------注册成功！-----
+199434 [http-nio-8080-exec-5] INFO  c.e.d.controller.RegistController - 返回结果：re = Result(result=true, Reason=null)
+209256 [http-nio-8080-exec-4] INFO  c.e.demo.controller.LoginController - ------有人登录------
+209265 [http-nio-8080-exec-4] INFO  c.e.demo.controller.LoginController - username = fengjinman
+209267 [http-nio-8080-exec-4] INFO  c.e.demo.controller.LoginController - password = dashuaige
+209267 [http-nio-8080-exec-4] INFO  c.e.d.service.Impl.UserServiceImpl - ------查询数据库-----
+209270 [http-nio-8080-exec-4] DEBUG c.e.demo.dao.UserDao.queryUser - ==>  Preparing: select * from user where username = ? 
+209274 [http-nio-8080-exec-4] DEBUG c.e.demo.dao.UserDao.queryUser - ==> Parameters: fengjinman(String)
+209278 [http-nio-8080-exec-4] DEBUG c.e.demo.dao.UserDao.queryUser - <==      Total: 1
+209279 [http-nio-8080-exec-4] INFO  c.e.d.service.Impl.UserServiceImpl - 返回结果：db_user = User(id=1, username=fengjinman, password=4edaaafbadba14ac81404398434fcf0e)
+209280 [http-nio-8080-exec-4] INFO  c.e.d.service.Impl.UserServiceImpl - -------登录成功------
+209280 [http-nio-8080-exec-4] INFO  c.e.demo.controller.LoginController - 返回结果：re = Result(result=true, Reason=null)
+217266 [http-nio-8080-exec-10] INFO  c.e.d.controller.MessageController - -----短信发送------
+217268 [http-nio-8080-exec-10] INFO  c.e.d.controller.MessageController - 电话号码列表：
+217268 [http-nio-8080-exec-10] INFO  c.e.d.controller.MessageController - 短信内容：
+217268 [http-nio-8080-exec-10] INFO  c.e.d.controller.MessageController - 返回结果：re = Result(result=false, Reason=您的短信服务暂未开通，请联系云服务！)
+1477 [main] INFO  com.example.demo.DemoApplication - Starting DemoApplication on PC-20180812CBGC with PID 3376 (E:\IdeaProjects\self001\target\classes started by Administrator in E:\IdeaProjects\self001)
+1482 [main] DEBUG com.example.demo.DemoApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+1485 [main] INFO  com.example.demo.DemoApplication - The following profiles are active: dev
+5631 [main] INFO  com.example.demo.DemoApplication - Started DemoApplication in 5.35 seconds (JVM running for 6.429)
+25325 [http-nio-8080-exec-1] INFO  c.e.demo.controller.LoginController - ------有人登录------
+25326 [http-nio-8080-exec-1] INFO  c.e.demo.controller.LoginController - username = fengjinman
+25327 [http-nio-8080-exec-1] INFO  c.e.demo.controller.LoginController - password = dashuaige
+25327 [http-nio-8080-exec-1] INFO  c.e.d.service.Impl.UserServiceImpl - ------查询数据库-----
+25349 [http-nio-8080-exec-1] DEBUG c.e.demo.dao.UserDao.queryUser - ==>  Preparing: select * from user where username = ? 
+25373 [http-nio-8080-exec-1] DEBUG c.e.demo.dao.UserDao.queryUser - ==> Parameters: fengjinman(String)
+25389 [http-nio-8080-exec-1] DEBUG c.e.demo.dao.UserDao.queryUser - <==      Total: 1
+25390 [http-nio-8080-exec-1] INFO  c.e.d.service.Impl.UserServiceImpl - 返回结果：db_user = User(id=1, username=fengjinman, password=4edaaafbadba14ac81404398434fcf0e)
+25391 [http-nio-8080-exec-1] INFO  c.e.d.service.Impl.UserServiceImpl - -------登录成功------
+25391 [http-nio-8080-exec-1] INFO  c.e.demo.controller.LoginController - 返回结果：re = Result(result=true, Reason=null)
+73880 [http-nio-8080-exec-10] INFO  c.e.d.controller.MessageController - -----短信发送------
+73881 [http-nio-8080-exec-10] INFO  c.e.d.controller.MessageController - 电话号码列表：15201144824
+73882 [http-nio-8080-exec-10] INFO  c.e.d.controller.MessageController - 短信内容：12121
+73883 [http-nio-8080-exec-10] INFO  c.e.d.controller.MessageController - 返回结果：re = Result(result=false, Reason=您的短信服务暂未开通，请联系云服务！)
+1179 [main] INFO  com.example.demo.DemoApplication - Starting DemoApplication on PC-20180812CBGC with PID 3928 (E:\IdeaProjects\self001\target\classes started by Administrator in E:\IdeaProjects\self001)
+1185 [main] DEBUG com.example.demo.DemoApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+1187 [main] INFO  com.example.demo.DemoApplication - The following profiles are active: dev
+5864 [main] INFO  com.example.demo.DemoApplication - Started DemoApplication in 5.572 seconds (JVM running for 6.297)
+1319 [main] INFO  com.example.demo.DemoApplication - Starting DemoApplication on PC-20180812CBGC with PID 1728 (E:\IdeaProjects\self001\target\classes started by Administrator in E:\IdeaProjects\self001)
+1325 [main] DEBUG com.example.demo.DemoApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+1360 [main] INFO  com.example.demo.DemoApplication - The following profiles are active: dev
+5793 [main] INFO  com.example.demo.DemoApplication - Started DemoApplication in 5.49 seconds (JVM running for 6.206)
+1035 [main] INFO  com.example.demo.DemoApplication - Starting DemoApplication on PC-20180812CBGC with PID 4072 (E:\IdeaProjects\self001\target\classes started by Administrator in E:\IdeaProjects\self001)
+1041 [main] DEBUG com.example.demo.DemoApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+1046 [main] INFO  com.example.demo.DemoApplication - The following profiles are active: dev
+5339 [main] INFO  com.example.demo.DemoApplication - Started DemoApplication in 5.043 seconds (JVM running for 5.985)
+1061 [main] INFO  com.example.demo.DemoApplication - Starting DemoApplication on PC-20180812CBGC with PID 2928 (E:\IdeaProjects\self001\target\classes started by Administrator in E:\IdeaProjects\self001)
+1066 [main] DEBUG com.example.demo.DemoApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+1068 [main] INFO  com.example.demo.DemoApplication - The following profiles are active: dev
+5752 [main] INFO  com.example.demo.DemoApplication - Started DemoApplication in 5.444 seconds (JVM running for 6.181)
+1119 [main] INFO  com.example.demo.DemoApplication - Starting DemoApplication on PC-20180812CBGC with PID 4072 (E:\IdeaProjects\self001\target\classes started by Administrator in E:\IdeaProjects\self001)
+1125 [main] DEBUG com.example.demo.DemoApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+1128 [main] INFO  com.example.demo.DemoApplication - The following profiles are active: dev
+5571 [main] INFO  com.example.demo.DemoApplication - Started DemoApplication in 5.239 seconds (JVM running for 5.994)
+1059 [main] INFO  com.example.demo.DemoApplication - Starting DemoApplication on PC-20180812CBGC with PID 3184 (E:\IdeaProjects\self001\target\classes started by Administrator in E:\IdeaProjects\self001)
+1065 [main] DEBUG com.example.demo.DemoApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+1067 [main] INFO  com.example.demo.DemoApplication - The following profiles are active: dev
+5825 [main] INFO  com.example.demo.DemoApplication - Started DemoApplication in 5.515 seconds (JVM running for 6.264)
+1046 [main] INFO  com.example.demo.DemoApplication - Starting DemoApplication on PC-20180812CBGC with PID 3868 (E:\IdeaProjects\self001\target\classes started by Administrator in E:\IdeaProjects\self001)
+1052 [main] DEBUG com.example.demo.DemoApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+1053 [main] INFO  com.example.demo.DemoApplication - The following profiles are active: dev
+5538 [main] INFO  com.example.demo.DemoApplication - Started DemoApplication in 5.246 seconds (JVM running for 5.954)
+1096 [main] INFO  com.example.demo.DemoApplication - Starting DemoApplication on PC-20180812CBGC with PID 2456 (E:\IdeaProjects\self001\target\classes started by Administrator in E:\IdeaProjects\self001)
+1102 [main] DEBUG com.example.demo.DemoApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+1104 [main] INFO  com.example.demo.DemoApplication - The following profiles are active: dev
+5531 [main] INFO  com.example.demo.DemoApplication - Started DemoApplication in 5.23 seconds (JVM running for 5.947)
+1068 [main] INFO  com.example.demo.DemoApplication - Starting DemoApplication on PC-20180812CBGC with PID 1816 (E:\IdeaProjects\self001\target\classes started by Administrator in E:\IdeaProjects\self001)
+1079 [main] DEBUG com.example.demo.DemoApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+1081 [main] INFO  com.example.demo.DemoApplication - The following profiles are active: dev
+5522 [main] INFO  com.example.demo.DemoApplication - Started DemoApplication in 5.217 seconds (JVM running for 5.92)
+1062 [main] INFO  com.example.demo.DemoApplication - Starting DemoApplication on PC-20180812CBGC with PID 460 (E:\IdeaProjects\self001\target\classes started by Administrator in E:\IdeaProjects\self001)
+1067 [main] DEBUG com.example.demo.DemoApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+1069 [main] INFO  com.example.demo.DemoApplication - The following profiles are active: dev
+5536 [main] INFO  com.example.demo.DemoApplication - Started DemoApplication in 5.231 seconds (JVM running for 5.961)
+1083 [main] INFO  com.example.demo.DemoApplication - Starting DemoApplication on PC-20180812CBGC with PID 4176 (E:\IdeaProjects\self001\target\classes started by Administrator in E:\IdeaProjects\self001)
+1090 [main] DEBUG com.example.demo.DemoApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+1092 [main] INFO  com.example.demo.DemoApplication - The following profiles are active: dev
+5530 [main] INFO  com.example.demo.DemoApplication - Started DemoApplication in 5.212 seconds (JVM running for 5.928)
+1385 [main] INFO  com.example.demo.DemoApplication - Starting DemoApplication on PC-20180812CBGC with PID 4808 (E:\IdeaProjects\self001\target\classes started by Administrator in E:\IdeaProjects\self001)
+1391 [main] DEBUG com.example.demo.DemoApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+1393 [main] INFO  com.example.demo.DemoApplication - The following profiles are active: dev
+5515 [main] INFO  com.example.demo.DemoApplication - Started DemoApplication in 5.104 seconds (JVM running for 6.051)
+1223 [main] INFO  com.example.demo.DemoApplication - Starting DemoApplication on PC-20180812CBGC with PID 2788 (E:\IdeaProjects\self001\target\classes started by Administrator in E:\IdeaProjects\self001)
+1229 [main] DEBUG com.example.demo.DemoApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+1232 [main] INFO  com.example.demo.DemoApplication - The following profiles are active: dev
+5622 [main] INFO  com.example.demo.DemoApplication - Started DemoApplication in 5.313 seconds (JVM running for 6.076)
+9644 [http-nio-8080-exec-2] INFO  c.e.demo.controller.LoginController - ------有人登录------
+9645 [http-nio-8080-exec-2] INFO  c.e.demo.controller.LoginController - username = fengjinman
+9645 [http-nio-8080-exec-2] INFO  c.e.demo.controller.LoginController - password = dashuaige
+9645 [http-nio-8080-exec-2] INFO  c.e.d.service.Impl.UserServiceImpl - ------查询数据库-----
+9668 [http-nio-8080-exec-2] DEBUG c.e.demo.dao.UserDao.queryUser - ==>  Preparing: select * from user where username = ? 
+9691 [http-nio-8080-exec-2] DEBUG c.e.demo.dao.UserDao.queryUser - ==> Parameters: fengjinman(String)
+9707 [http-nio-8080-exec-2] DEBUG c.e.demo.dao.UserDao.queryUser - <==      Total: 1
+9708 [http-nio-8080-exec-2] INFO  c.e.d.service.Impl.UserServiceImpl - 返回结果：db_user = User(id=1, username=fengjinman, password=4edaaafbadba14ac81404398434fcf0e)
+9710 [http-nio-8080-exec-2] INFO  c.e.d.service.Impl.UserServiceImpl - -------登录成功------
+9710 [http-nio-8080-exec-2] INFO  c.e.demo.controller.LoginController - 返回结果：re = Result(result=true, Reason=null)
+1031 [main] INFO  com.example.demo.DemoApplication - Starting DemoApplication on PC-20180812CBGC with PID 4300 (E:\IdeaProjects\self001\target\classes started by Administrator in E:\IdeaProjects\self001)
+1035 [main] DEBUG com.example.demo.DemoApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+1037 [main] INFO  com.example.demo.DemoApplication - The following profiles are active: dev
+5365 [main] INFO  com.example.demo.DemoApplication - Started DemoApplication in 5.074 seconds (JVM running for 5.77)
+26019 [http-nio-8080-exec-1] INFO  c.e.demo.controller.LoginController - ------有人登录------
+26020 [http-nio-8080-exec-1] INFO  c.e.demo.controller.LoginController - username = fengjinman
+26020 [http-nio-8080-exec-1] INFO  c.e.demo.controller.LoginController - password = dashuaige
+26020 [http-nio-8080-exec-1] INFO  c.e.d.service.Impl.UserServiceImpl - ------查询数据库-----
+26042 [http-nio-8080-exec-1] DEBUG c.e.demo.dao.UserDao.queryUser - ==>  Preparing: select * from user where username = ? 
+26064 [http-nio-8080-exec-1] DEBUG c.e.demo.dao.UserDao.queryUser - ==> Parameters: fengjinman(String)
+26079 [http-nio-8080-exec-1] DEBUG c.e.demo.dao.UserDao.queryUser - <==      Total: 1
+26080 [http-nio-8080-exec-1] INFO  c.e.d.service.Impl.UserServiceImpl - 返回结果：db_user = User(id=1, username=fengjinman, password=4edaaafbadba14ac81404398434fcf0e)
+26081 [http-nio-8080-exec-1] INFO  c.e.d.service.Impl.UserServiceImpl - -------登录成功------
+26081 [http-nio-8080-exec-1] INFO  c.e.demo.controller.LoginController - 返回结果：re = Result(result=true, Reason=null)
+30426 [http-nio-8080-exec-3] INFO  c.e.demo.controller.LoginController - ------有人登录------
+30428 [http-nio-8080-exec-3] INFO  c.e.demo.controller.LoginController - username = fengjinman
+30430 [http-nio-8080-exec-3] INFO  c.e.demo.controller.LoginController - password = dashuaige
+30430 [http-nio-8080-exec-3] INFO  c.e.d.service.Impl.UserServiceImpl - ------查询数据库-----
+30434 [http-nio-8080-exec-3] DEBUG c.e.demo.dao.UserDao.queryUser - ==>  Preparing: select * from user where username = ? 
+30434 [http-nio-8080-exec-3] DEBUG c.e.demo.dao.UserDao.queryUser - ==> Parameters: fengjinman(String)
+30436 [http-nio-8080-exec-3] DEBUG c.e.demo.dao.UserDao.queryUser - <==      Total: 1
+30436 [http-nio-8080-exec-3] INFO  c.e.d.service.Impl.UserServiceImpl - 返回结果：db_user = User(id=1, username=fengjinman, password=4edaaafbadba14ac81404398434fcf0e)
+30437 [http-nio-8080-exec-3] INFO  c.e.d.service.Impl.UserServiceImpl - -------登录成功------
+30437 [http-nio-8080-exec-3] INFO  c.e.demo.controller.LoginController - 返回结果：re = Result(result=true, Reason=null)
+39772 [http-nio-8080-exec-4] INFO  c.e.demo.controller.LoginController - ------有人登录------
+39772 [http-nio-8080-exec-4] INFO  c.e.demo.controller.LoginController - username = fengjinman
+39772 [http-nio-8080-exec-4] INFO  c.e.demo.controller.LoginController - password = dashuaige
+39773 [http-nio-8080-exec-4] INFO  c.e.d.service.Impl.UserServiceImpl - ------查询数据库-----
+39774 [http-nio-8080-exec-4] DEBUG c.e.demo.dao.UserDao.queryUser - ==>  Preparing: select * from user where username = ? 
+39775 [http-nio-8080-exec-4] DEBUG c.e.demo.dao.UserDao.queryUser - ==> Parameters: fengjinman(String)
+39779 [http-nio-8080-exec-4] DEBUG c.e.demo.dao.UserDao.queryUser - <==      Total: 1
+39780 [http-nio-8080-exec-4] INFO  c.e.d.service.Impl.UserServiceImpl - 返回结果：db_user = User(id=1, username=fengjinman, password=4edaaafbadba14ac81404398434fcf0e)
+39780 [http-nio-8080-exec-4] INFO  c.e.d.service.Impl.UserServiceImpl - -------登录成功------
+39780 [http-nio-8080-exec-4] INFO  c.e.demo.controller.LoginController - 返回结果：re = Result(result=true, Reason=null)
+1034 [main] INFO  com.example.demo.DemoApplication - Starting DemoApplication on PC-20180812CBGC with PID 5056 (E:\IdeaProjects\self001\target\classes started by Administrator in E:\IdeaProjects\self001)
+1039 [main] DEBUG com.example.demo.DemoApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+1041 [main] INFO  com.example.demo.DemoApplication - The following profiles are active: dev
+5484 [main] INFO  com.example.demo.DemoApplication - Started DemoApplication in 5.186 seconds (JVM running for 5.92)
+13595 [http-nio-8080-exec-1] INFO  c.e.demo.controller.LoginController - ------有人登录------
+13595 [http-nio-8080-exec-1] INFO  c.e.demo.controller.LoginController - username = fengjinman
+13595 [http-nio-8080-exec-1] INFO  c.e.demo.controller.LoginController - password = dashuaige
+13596 [http-nio-8080-exec-1] INFO  c.e.d.service.Impl.UserServiceImpl - ------查询数据库-----
+13617 [http-nio-8080-exec-1] DEBUG c.e.demo.dao.UserDao.queryUser - ==>  Preparing: select * from user where username = ? 
+13639 [http-nio-8080-exec-1] DEBUG c.e.demo.dao.UserDao.queryUser - ==> Parameters: fengjinman(String)
+13654 [http-nio-8080-exec-1] DEBUG c.e.demo.dao.UserDao.queryUser - <==      Total: 1
+13655 [http-nio-8080-exec-1] INFO  c.e.d.service.Impl.UserServiceImpl - 返回结果：db_user = User(id=1, username=fengjinman, password=4edaaafbadba14ac81404398434fcf0e)
+13656 [http-nio-8080-exec-1] INFO  c.e.d.service.Impl.UserServiceImpl - -------登录成功------
+13657 [http-nio-8080-exec-1] INFO  c.e.demo.controller.LoginController - 返回结果：re = Result(result=true, Reason=null)
+1467 [main] INFO  com.example.demo.DemoApplication - Starting DemoApplication on PC-20180812CBGC with PID 4416 (E:\IdeaProjects\self001\target\classes started by Administrator in E:\IdeaProjects\self001)
+1473 [main] DEBUG com.example.demo.DemoApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+1475 [main] INFO  com.example.demo.DemoApplication - The following profiles are active: dev
+5829 [main] INFO  com.example.demo.DemoApplication - Started DemoApplication in 5.445 seconds (JVM running for 6.426)
+12546 [http-nio-8080-exec-1] INFO  c.e.demo.controller.LoginController - ------有人登录------
+12547 [http-nio-8080-exec-1] INFO  c.e.demo.controller.LoginController - username = fengjinman
+12547 [http-nio-8080-exec-1] INFO  c.e.demo.controller.LoginController - password = dashuaige
+12547 [http-nio-8080-exec-1] INFO  c.e.d.service.Impl.UserServiceImpl - ------查询数据库-----
+12568 [http-nio-8080-exec-1] DEBUG c.e.demo.dao.UserDao.queryUser - ==>  Preparing: select * from user where username = ? 
+12591 [http-nio-8080-exec-1] DEBUG c.e.demo.dao.UserDao.queryUser - ==> Parameters: fengjinman(String)
+12607 [http-nio-8080-exec-1] DEBUG c.e.demo.dao.UserDao.queryUser - <==      Total: 1
+12608 [http-nio-8080-exec-1] INFO  c.e.d.service.Impl.UserServiceImpl - 返回结果：db_user = User(id=1, username=fengjinman, password=4edaaafbadba14ac81404398434fcf0e)
+12609 [http-nio-8080-exec-1] INFO  c.e.d.service.Impl.UserServiceImpl - -------登录成功------
+12610 [http-nio-8080-exec-1] INFO  c.e.demo.controller.LoginController - 返回结果：re = Result(result=true, Reason=null)
+17161 [http-nio-8080-exec-3] INFO  c.e.demo.controller.LoginController - ------有人登录------
+17163 [http-nio-8080-exec-3] INFO  c.e.demo.controller.LoginController - username = fengjinman
+17164 [http-nio-8080-exec-3] INFO  c.e.demo.controller.LoginController - password = dashuaige
+17165 [http-nio-8080-exec-3] INFO  c.e.d.service.Impl.UserServiceImpl - ------查询数据库-----
+17166 [http-nio-8080-exec-3] DEBUG c.e.demo.dao.UserDao.queryUser - ==>  Preparing: select * from user where username = ? 
+17168 [http-nio-8080-exec-3] DEBUG c.e.demo.dao.UserDao.queryUser - ==> Parameters: fengjinman(String)
+17170 [http-nio-8080-exec-3] DEBUG c.e.demo.dao.UserDao.queryUser - <==      Total: 1
+17170 [http-nio-8080-exec-3] INFO  c.e.d.service.Impl.UserServiceImpl - 返回结果：db_user = User(id=1, username=fengjinman, password=4edaaafbadba14ac81404398434fcf0e)
+17171 [http-nio-8080-exec-3] INFO  c.e.d.service.Impl.UserServiceImpl - -------登录成功------
+17171 [http-nio-8080-exec-3] INFO  c.e.demo.controller.LoginController - 返回结果：re = Result(result=true, Reason=null)
+54776 [http-nio-8080-exec-4] INFO  c.e.demo.controller.LoginController - ------有人登录------
+54777 [http-nio-8080-exec-4] INFO  c.e.demo.controller.LoginController - username = fengjinman
+54777 [http-nio-8080-exec-4] INFO  c.e.demo.controller.LoginController - password = dashuaige
+54777 [http-nio-8080-exec-4] INFO  c.e.d.service.Impl.UserServiceImpl - ------查询数据库-----
+54781 [http-nio-8080-exec-4] DEBUG c.e.demo.dao.UserDao.queryUser - ==>  Preparing: select * from user where username = ? 
+54782 [http-nio-8080-exec-4] DEBUG c.e.demo.dao.UserDao.queryUser - ==> Parameters: fengjinman(String)
+54783 [http-nio-8080-exec-4] DEBUG c.e.demo.dao.UserDao.queryUser - <==      Total: 1
+54784 [http-nio-8080-exec-4] INFO  c.e.d.service.Impl.UserServiceImpl - 返回结果：db_user = User(id=1, username=fengjinman, password=4edaaafbadba14ac81404398434fcf0e)
+54784 [http-nio-8080-exec-4] INFO  c.e.d.service.Impl.UserServiceImpl - -------登录成功------
+54784 [http-nio-8080-exec-4] INFO  c.e.demo.controller.LoginController - 返回结果：re = Result(result=true, Reason=null)
+1049 [main] INFO  com.example.demo.DemoApplication - Starting DemoApplication on PC-20180812CBGC with PID 3264 (E:\IdeaProjects\self001\target\classes started by Administrator in E:\IdeaProjects\self001)
+1058 [main] DEBUG com.example.demo.DemoApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+1060 [main] INFO  com.example.demo.DemoApplication - The following profiles are active: dev
+6102 [main] INFO  com.example.demo.DemoApplication - Started DemoApplication in 5.811 seconds (JVM running for 6.522)
+6960 [http-nio-8080-exec-2] INFO  c.e.demo.controller.LoginController - ------有人登录------
+6960 [http-nio-8080-exec-2] INFO  c.e.demo.controller.LoginController - username = fengjinman
+6961 [http-nio-8080-exec-2] INFO  c.e.demo.controller.LoginController - password = dashuaige
+6961 [http-nio-8080-exec-2] INFO  c.e.d.service.Impl.UserServiceImpl - ------查询数据库-----
+6981 [http-nio-8080-exec-2] DEBUG c.e.demo.dao.UserDao.queryUser - ==>  Preparing: select * from user where username = ? 
+7003 [http-nio-8080-exec-2] DEBUG c.e.demo.dao.UserDao.queryUser - ==> Parameters: fengjinman(String)
+7018 [http-nio-8080-exec-2] DEBUG c.e.demo.dao.UserDao.queryUser - <==      Total: 1
+7019 [http-nio-8080-exec-2] INFO  c.e.d.service.Impl.UserServiceImpl - 返回结果：db_user = User(id=1, username=fengjinman, password=4edaaafbadba14ac81404398434fcf0e)
+7021 [http-nio-8080-exec-2] INFO  c.e.d.service.Impl.UserServiceImpl - -------登录成功------
+7021 [http-nio-8080-exec-2] INFO  c.e.demo.controller.LoginController - 返回结果：re = Result(result=true, Reason=null)
+1075 [main] INFO  com.example.demo.DemoApplication - Starting DemoApplication on PC-20180812CBGC with PID 4272 (E:\IdeaProjects\self001\target\classes started by Administrator in E:\IdeaProjects\self001)
+1079 [main] DEBUG com.example.demo.DemoApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+1081 [main] INFO  com.example.demo.DemoApplication - The following profiles are active: dev
+5574 [main] INFO  com.example.demo.DemoApplication - Started DemoApplication in 5.28 seconds (JVM running for 6.075)
+9578 [http-nio-8080-exec-1] INFO  c.e.demo.controller.LoginController - ------有人登录------
+9579 [http-nio-8080-exec-1] INFO  c.e.demo.controller.LoginController - username = fengjinman
+9579 [http-nio-8080-exec-1] INFO  c.e.demo.controller.LoginController - password = dashuaige
+9579 [http-nio-8080-exec-1] INFO  c.e.d.service.Impl.UserServiceImpl - ------查询数据库-----
+9600 [http-nio-8080-exec-1] DEBUG c.e.demo.dao.UserDao.queryUser - ==>  Preparing: select * from user where username = ? 
+9622 [http-nio-8080-exec-1] DEBUG c.e.demo.dao.UserDao.queryUser - ==> Parameters: fengjinman(String)
+9637 [http-nio-8080-exec-1] DEBUG c.e.demo.dao.UserDao.queryUser - <==      Total: 1
+9638 [http-nio-8080-exec-1] INFO  c.e.d.service.Impl.UserServiceImpl - 返回结果：db_user = User(id=1, username=fengjinman, password=4edaaafbadba14ac81404398434fcf0e)
+9640 [http-nio-8080-exec-1] INFO  c.e.d.service.Impl.UserServiceImpl - -------登录成功------
+9640 [http-nio-8080-exec-1] INFO  c.e.demo.controller.LoginController - 返回结果：re = Result(result=true, Reason=null)
+1135 [main] INFO  com.example.demo.DemoApplication - Starting DemoApplication on PC-20180812CBGC with PID 4540 (E:\IdeaProjects\self001\target\classes started by Administrator in E:\IdeaProjects\self001)
+1141 [main] DEBUG com.example.demo.DemoApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+1144 [main] INFO  com.example.demo.DemoApplication - The following profiles are active: dev
+5557 [main] INFO  com.example.demo.DemoApplication - Started DemoApplication in 5.236 seconds (JVM running for 6.024)
+1054 [main] INFO  com.example.demo.DemoApplication - Starting DemoApplication on PC-20180812CBGC with PID 2700 (E:\IdeaProjects\self001\target\classes started by Administrator in E:\IdeaProjects\self001)
+1060 [main] DEBUG com.example.demo.DemoApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+1062 [main] INFO  com.example.demo.DemoApplication - The following profiles are active: dev
+5454 [main] INFO  com.example.demo.DemoApplication - Started DemoApplication in 5.144 seconds (JVM running for 5.922)
+25581 [http-nio-8080-exec-4] INFO  c.e.d.controller.MessageController - -----短信发送------
+25582 [http-nio-8080-exec-4] INFO  c.e.d.controller.MessageController - 电话号码列表：15201144824
+25583 [http-nio-8080-exec-4] INFO  c.e.d.controller.MessageController - 短信内容：1212
+25583 [http-nio-8080-exec-4] INFO  c.e.d.controller.MessageController - 返回结果：re = Result(result=false, Reason=您的短信服务暂未开通，请联系云服务！)
+1079 [main] INFO  com.example.demo.DemoApplication - Starting DemoApplication on PC-20180812CBGC with PID 3876 (E:\IdeaProjects\self001\target\classes started by Administrator in E:\IdeaProjects\self001)
+1086 [main] DEBUG com.example.demo.DemoApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+1088 [main] INFO  com.example.demo.DemoApplication - The following profiles are active: dev
+6122 [main] INFO  com.example.demo.DemoApplication - Started DemoApplication in 5.815 seconds (JVM running for 6.552)
+1079 [main] INFO  com.example.demo.DemoApplication - Starting DemoApplication on PC-20180812CBGC with PID 4812 (E:\IdeaProjects\self001\target\classes started by Administrator in E:\IdeaProjects\self001)
+1085 [main] DEBUG com.example.demo.DemoApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+1088 [main] INFO  com.example.demo.DemoApplication - The following profiles are active: dev
+5456 [main] INFO  com.example.demo.DemoApplication - Started DemoApplication in 5.145 seconds (JVM running for 5.923)
+1152 [main] INFO  com.example.demo.DemoApplication - Starting DemoApplication on PC-20180812CBGC with PID 3960 (E:\IdeaProjects\self001\target\classes started by Administrator in E:\IdeaProjects\self001)
+1157 [main] DEBUG com.example.demo.DemoApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+1159 [main] INFO  com.example.demo.DemoApplication - The following profiles are active: dev
+5731 [main] INFO  com.example.demo.DemoApplication - Started DemoApplication in 5.415 seconds (JVM running for 6.13)
+16799 [http-nio-8080-exec-9] INFO  c.e.d.controller.MessageController - -----短信发送------
+16800 [http-nio-8080-exec-9] INFO  c.e.d.controller.MessageController - 电话号码列表：151212
+16800 [http-nio-8080-exec-9] INFO  c.e.d.controller.MessageController - 短信内容：11132
+16800 [http-nio-8080-exec-9] INFO  c.e.d.controller.MessageController - 返回结果：re = Result(result=false, Reason=您的短信服务暂未开通，请联系云服务！)
+24786 [http-nio-8080-exec-2] INFO  c.e.d.controller.MessageController - -----短信发送------
+24790 [http-nio-8080-exec-2] INFO  c.e.d.controller.MessageController - 电话号码列表：151212,1212
+24790 [http-nio-8080-exec-2] INFO  c.e.d.controller.MessageController - 短信内容：11132
+24791 [http-nio-8080-exec-2] INFO  c.e.d.controller.MessageController - 返回结果：re = Result(result=false, Reason=您的短信服务暂未开通，请联系云服务！)
+1109 [main] INFO  com.example.demo.DemoApplication - Starting DemoApplication on PC-20180812CBGC with PID 1044 (E:\IdeaProjects\self001\target\classes started by Administrator in E:\IdeaProjects\self001)
+1162 [main] DEBUG com.example.demo.DemoApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+1164 [main] INFO  com.example.demo.DemoApplication - The following profiles are active: dev
+5421 [main] INFO  com.example.demo.DemoApplication - Started DemoApplication in 5.121 seconds (JVM running for 5.881)
+1094 [main] INFO  com.example.demo.DemoApplication - Starting DemoApplication on PC-20180812CBGC with PID 4316 (E:\IdeaProjects\self001\target\classes started by Administrator in E:\IdeaProjects\self001)
+1098 [main] DEBUG com.example.demo.DemoApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+1100 [main] INFO  com.example.demo.DemoApplication - The following profiles are active: dev
+1410 [main] INFO  com.example.demo.DemoApplication - Starting DemoApplication on PC-20180812CBGC with PID 5108 (E:\IdeaProjects\self001\target\classes started by Administrator in E:\IdeaProjects\self001)
+1416 [main] DEBUG com.example.demo.DemoApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+1418 [main] INFO  com.example.demo.DemoApplication - The following profiles are active: dev
+5737 [main] INFO  com.example.demo.DemoApplication - Started DemoApplication in 5.388 seconds (JVM running for 6.377)
+1034 [main] INFO  com.example.demo.DemoApplication - Starting DemoApplication on PC-20180812CBGC with PID 4164 (E:\IdeaProjects\self001\target\classes started by Administrator in E:\IdeaProjects\self001)
+1039 [main] DEBUG com.example.demo.DemoApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+1041 [main] INFO  com.example.demo.DemoApplication - The following profiles are active: dev
+5628 [main] INFO  com.example.demo.DemoApplication - Started DemoApplication in 5.32 seconds (JVM running for 6.108)
+1171 [main] INFO  com.example.demo.DemoApplication - Starting DemoApplication on PC-20180812CBGC with PID 1300 (E:\IdeaProjects\self001\target\classes started by Administrator in E:\IdeaProjects\self001)
+1178 [main] DEBUG com.example.demo.DemoApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+1180 [main] INFO  com.example.demo.DemoApplication - The following profiles are active: dev
+5539 [main] INFO  com.example.demo.DemoApplication - Started DemoApplication in 5.192 seconds (JVM running for 6.37)
+1190 [main] INFO  com.example.demo.DemoApplication - Starting DemoApplication on PC-20180812CBGC with PID 2304 (E:\IdeaProjects\self001\target\classes started by Administrator in E:\IdeaProjects\self001)
+1209 [main] DEBUG com.example.demo.DemoApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+1244 [main] INFO  com.example.demo.DemoApplication - The following profiles are active: dev
+5801 [main] INFO  com.example.demo.DemoApplication - Started DemoApplication in 5.404 seconds (JVM running for 6.328)
+21697 [http-nio-8080-exec-4] INFO  c.e.d.controller.MessageController - -----短信发送------
+21698 [http-nio-8080-exec-4] INFO  c.e.d.controller.MessageController - 电话号码列表：
+21698 [http-nio-8080-exec-4] INFO  c.e.d.controller.MessageController - 短信内容：
+21699 [http-nio-8080-exec-4] INFO  c.e.d.controller.MessageController - 返回结果：re = Result(result=false, Reason=您的短信服务暂未开通，请联系云服务！)
+1088 [main] INFO  com.example.demo.DemoApplication - Starting DemoApplication on PC-20180812CBGC with PID 2792 (E:\IdeaProjects\self001\target\classes started by Administrator in E:\IdeaProjects\self001)
+1095 [main] DEBUG com.example.demo.DemoApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+1097 [main] INFO  com.example.demo.DemoApplication - The following profiles are active: dev
+5530 [main] INFO  com.example.demo.DemoApplication - Started DemoApplication in 5.239 seconds (JVM running for 5.957)
+13474 [http-nio-8080-exec-2] INFO  c.e.d.controller.MessageController - -----短信发送------
+13475 [http-nio-8080-exec-2] INFO  c.e.d.controller.MessageController - 电话号码列表：
+13475 [http-nio-8080-exec-2] INFO  c.e.d.controller.MessageController - 短信内容：
+13475 [http-nio-8080-exec-2] INFO  c.e.d.controller.MessageController - 返回结果：re = Result(result=false, Reason=您的短信服务暂未开通，请联系云服务！)
+1107 [main] INFO  com.example.demo.DemoApplication - Starting DemoApplication on PC-20180812CBGC with PID 1376 (E:\IdeaProjects\self001\target\classes started by Administrator in E:\IdeaProjects\self001)
+1113 [main] DEBUG com.example.demo.DemoApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+1115 [main] INFO  com.example.demo.DemoApplication - The following profiles are active: dev
+5690 [main] INFO  com.example.demo.DemoApplication - Started DemoApplication in 5.37 seconds (JVM running for 6.219)
+631140 [http-nio-8080-exec-1] INFO  c.e.d.controller.MessageController - -----短信发送------
+631141 [http-nio-8080-exec-1] INFO  c.e.d.controller.MessageController - 电话号码列表：15201144824
+631141 [http-nio-8080-exec-1] INFO  c.e.d.controller.MessageController - 短信内容：11111
+631141 [http-nio-8080-exec-1] INFO  c.e.d.controller.MessageController - 返回结果：re = Result(result=false, Reason=您的短信服务暂未开通，请联系云服务！)
+661519 [http-nio-8080-exec-4] INFO  c.e.d.controller.MessageController - -----短信发送------
+661520 [http-nio-8080-exec-4] INFO  c.e.d.controller.MessageController - 电话号码列表：15201144824
+661520 [http-nio-8080-exec-4] INFO  c.e.d.controller.MessageController - 短信内容：11111
+661520 [http-nio-8080-exec-4] INFO  c.e.d.controller.MessageController - 返回结果：re = Result(result=false, Reason=您的短信服务暂未开通，请联系云服务！)
+664296 [http-nio-8080-exec-5] INFO  c.e.d.controller.MessageController - -----短信发送------
+664297 [http-nio-8080-exec-5] INFO  c.e.d.controller.MessageController - 电话号码列表：15201144824
+664297 [http-nio-8080-exec-5] INFO  c.e.d.controller.MessageController - 短信内容：11111
+664297 [http-nio-8080-exec-5] INFO  c.e.d.controller.MessageController - 返回结果：re = Result(result=false, Reason=您的短信服务暂未开通，请联系云服务！)
+688950 [http-nio-8080-exec-7] INFO  c.e.d.controller.MessageController - -----短信发送------
+688951 [http-nio-8080-exec-7] INFO  c.e.d.controller.MessageController - 电话号码列表：15201144824
+688951 [http-nio-8080-exec-7] INFO  c.e.d.controller.MessageController - 短信内容：11111
+688951 [http-nio-8080-exec-7] INFO  c.e.d.controller.MessageController - 返回结果：re = Result(result=false, Reason=您的短信服务暂未开通，请联系云服务！)
+691579 [http-nio-8080-exec-9] INFO  c.e.d.controller.MessageController - -----短信发送------
+691580 [http-nio-8080-exec-9] INFO  c.e.d.controller.MessageController - 电话号码列表：15201144824
+691581 [http-nio-8080-exec-9] INFO  c.e.d.controller.MessageController - 短信内容：11111
+691582 [http-nio-8080-exec-9] INFO  c.e.d.controller.MessageController - 返回结果：re = Result(result=false, Reason=您的短信服务暂未开通，请联系云服务！)
+711842 [http-nio-8080-exec-2] INFO  c.e.d.controller.MessageController - -----短信发送------
+711842 [http-nio-8080-exec-2] INFO  c.e.d.controller.MessageController - 电话号码列表：15201144824
+711842 [http-nio-8080-exec-2] INFO  c.e.d.controller.MessageController - 短信内容：11111
+711843 [http-nio-8080-exec-2] INFO  c.e.d.controller.MessageController - 返回结果：re = Result(result=false, Reason=您的短信服务暂未开通，请联系云服务！)
+1841 [restartedMain] INFO  com.example.demo.DemoApplication - Starting DemoApplication on PC-20180812CBGC with PID 4304 (E:\IdeaProjects\self001\target\classes started by Administrator in E:\IdeaProjects\self001)
+1843 [restartedMain] DEBUG com.example.demo.DemoApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+1846 [restartedMain] INFO  com.example.demo.DemoApplication - The following profiles are active: dev
+7936 [restartedMain] INFO  com.example.demo.DemoApplication - Started DemoApplication in 7.39 seconds (JVM running for 8.354)
+246015 [restartedMain] INFO  com.example.demo.DemoApplication - Starting DemoApplication on PC-20180812CBGC with PID 4304 (E:\IdeaProjects\self001\target\classes started by Administrator in E:\IdeaProjects\self001)
+246016 [restartedMain] DEBUG com.example.demo.DemoApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+246033 [restartedMain] INFO  com.example.demo.DemoApplication - The following profiles are active: dev
+247974 [restartedMain] INFO  com.example.demo.DemoApplication - Started DemoApplication in 2.173 seconds (JVM running for 248.384)
+250861 [restartedMain] INFO  com.example.demo.DemoApplication - Starting DemoApplication on PC-20180812CBGC with PID 4304 (E:\IdeaProjects\self001\target\classes started by Administrator in E:\IdeaProjects\self001)
+250862 [restartedMain] DEBUG com.example.demo.DemoApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+250862 [restartedMain] INFO  com.example.demo.DemoApplication - The following profiles are active: dev
+252241 [restartedMain] INFO  com.example.demo.DemoApplication - Started DemoApplication in 1.456 seconds (JVM running for 252.651)
+260570 [restartedMain] INFO  com.example.demo.DemoApplication - Starting DemoApplication on PC-20180812CBGC with PID 4304 (E:\IdeaProjects\self001\target\classes started by Administrator in E:\IdeaProjects\self001)
+260570 [restartedMain] DEBUG com.example.demo.DemoApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+260570 [restartedMain] INFO  com.example.demo.DemoApplication - The following profiles are active: dev
+261835 [restartedMain] INFO  com.example.demo.DemoApplication - Started DemoApplication in 1.337 seconds (JVM running for 262.245)
+266635 [restartedMain] INFO  com.example.demo.DemoApplication - Starting DemoApplication on PC-20180812CBGC with PID 4304 (E:\IdeaProjects\self001\target\classes started by Administrator in E:\IdeaProjects\self001)
+266636 [restartedMain] DEBUG com.example.demo.DemoApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+266636 [restartedMain] INFO  com.example.demo.DemoApplication - The following profiles are active: dev
+267828 [restartedMain] INFO  com.example.demo.DemoApplication - Started DemoApplication in 1.277 seconds (JVM running for 268.237)
+1563 [restartedMain] INFO  com.example.demo.DemoApplication - Starting DemoApplication on PC-20180812CBGC with PID 1260 (E:\IdeaProjects\self001\target\classes started by Administrator in E:\IdeaProjects\self001)
+1566 [restartedMain] DEBUG com.example.demo.DemoApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+1569 [restartedMain] INFO  com.example.demo.DemoApplication - The following profiles are active: dev
+8281 [restartedMain] INFO  com.example.demo.DemoApplication - Started DemoApplication in 7.823 seconds (JVM running for 8.789)
+430210 [restartedMain] INFO  com.example.demo.DemoApplication - Starting DemoApplication on PC-20180812CBGC with PID 1260 (E:\IdeaProjects\self001\target\classes started by Administrator in E:\IdeaProjects\self001)
+430210 [restartedMain] DEBUG com.example.demo.DemoApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+430210 [restartedMain] INFO  com.example.demo.DemoApplication - The following profiles are active: dev
+431763 [restartedMain] INFO  com.example.demo.DemoApplication - Started DemoApplication in 1.638 seconds (JVM running for 432.258)
+1135 [restartedMain] INFO  com.example.demo.DemoApplication - Starting DemoApplication on PC-20180812CBGC with PID 4656 (E:\IdeaProjects\self001\target\classes started by Administrator in E:\IdeaProjects\self001)
+1136 [restartedMain] DEBUG com.example.demo.DemoApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+1138 [restartedMain] INFO  com.example.demo.DemoApplication - The following profiles are active: dev
+7359 [restartedMain] INFO  com.example.demo.DemoApplication - Started DemoApplication in 6.889 seconds (JVM running for 7.78)
+1771 [restartedMain] INFO  com.example.demo.DemoApplication - Starting DemoApplication on PC-20180812CBGC with PID 4272 (E:\IdeaProjects\self001\target\classes started by Administrator in E:\IdeaProjects\self001)
+1777 [restartedMain] DEBUG com.example.demo.DemoApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+1840 [restartedMain] INFO  com.example.demo.DemoApplication - The following profiles are active: dev
+10595 [restartedMain] INFO  com.example.demo.DemoApplication - Started DemoApplication in 10.031 seconds (JVM running for 11.501)
+138802 [restartedMain] INFO  com.example.demo.DemoApplication - Starting DemoApplication on PC-20180812CBGC with PID 4272 (E:\IdeaProjects\self001\target\classes started by Administrator in E:\IdeaProjects\self001)
+138803 [restartedMain] DEBUG com.example.demo.DemoApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+138804 [restartedMain] INFO  com.example.demo.DemoApplication - The following profiles are active: dev
+140462 [restartedMain] INFO  com.example.demo.DemoApplication - Started DemoApplication in 1.786 seconds (JVM running for 141.364)
+1450 [restartedMain] INFO  com.example.demo.DemoApplication - Starting DemoApplication on PC-20180812CBGC with PID 5008 (E:\IdeaProjects\self001\target\classes started by Administrator in E:\IdeaProjects\self001)
+1452 [restartedMain] DEBUG com.example.demo.DemoApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+1455 [restartedMain] INFO  com.example.demo.DemoApplication - The following profiles are active: dev
+7797 [restartedMain] INFO  com.example.demo.DemoApplication - Started DemoApplication in 7.252 seconds (JVM running for 8.322)
+1441 [restartedMain] INFO  com.example.demo.DemoApplication - Starting DemoApplication on PC-20180812CBGC with PID 4836 (E:\IdeaProjects\self001\target\classes started by Administrator in E:\IdeaProjects\self001)
+1443 [restartedMain] DEBUG com.example.demo.DemoApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+1446 [restartedMain] INFO  com.example.demo.DemoApplication - The following profiles are active: dev
+6394 [restartedMain] INFO  com.example.demo.DemoApplication - Started DemoApplication in 5.931 seconds (JVM running for 6.832)
+103243 [restartedMain] INFO  com.example.demo.DemoApplication - Starting DemoApplication on PC-20180812CBGC with PID 4836 (E:\IdeaProjects\self001\target\classes started by Administrator in E:\IdeaProjects\self001)
+103244 [restartedMain] DEBUG com.example.demo.DemoApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+103244 [restartedMain] INFO  com.example.demo.DemoApplication - The following profiles are active: dev
+104997 [restartedMain] INFO  com.example.demo.DemoApplication - Started DemoApplication in 1.828 seconds (JVM running for 105.432)
+125430 [restartedMain] INFO  com.example.demo.DemoApplication - Starting DemoApplication on PC-20180812CBGC with PID 4836 (E:\IdeaProjects\self001\target\classes started by Administrator in E:\IdeaProjects\self001)
+125431 [restartedMain] DEBUG com.example.demo.DemoApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+125431 [restartedMain] INFO  com.example.demo.DemoApplication - The following profiles are active: dev
+126625 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>使用fixedRate1535984851557
+126626 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>fixedDelay1535984851558
+126645 [restartedMain] INFO  com.example.demo.DemoApplication - Started DemoApplication in 1.298 seconds (JVM running for 127.079)
+130069 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>使用cron  1535984855001
+131623 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>使用fixedRate1535984856555
+131627 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>fixedDelay1535984856559
+135070 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>使用cron  1535984860002
+136624 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>使用fixedRate1535984861556
+136628 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>fixedDelay1535984861560
+140069 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>使用cron  1535984865001
+141624 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>使用fixedRate1535984866556
+141633 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>fixedDelay1535984866565
+145069 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>使用cron  1535984870001
+146623 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>使用fixedRate1535984871555
+146635 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>fixedDelay1535984871567
+150070 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>使用cron  1535984875002
+151624 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>使用fixedRate1535984876556
+151638 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>fixedDelay1535984876570
+155069 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>使用cron  1535984880001
+156625 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>使用fixedRate1535984881557
+156639 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>fixedDelay1535984881571
+160069 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>使用cron  1535984885001
+161624 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>使用fixedRate1535984886556
+161642 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>fixedDelay1535984886574
+165069 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>使用cron  1535984890001
+166624 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>使用fixedRate1535984891556
+166644 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>fixedDelay1535984891576
+170070 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>使用cron  1535984895002
+171625 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>使用fixedRate1535984896557
+171646 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>fixedDelay1535984896578
+175069 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>使用cron  1535984900001
+176625 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>使用fixedRate1535984901557
+176648 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>fixedDelay1535984901580
+180068 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>使用cron  1535984905000
+181624 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>使用fixedRate1535984906556
+181649 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>fixedDelay1535984906581
+185070 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>使用cron  1535984910002
+186625 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>使用fixedRate1535984911557
+186653 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>fixedDelay1535984911585
+190069 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>使用cron  1535984915001
+191625 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>使用fixedRate1535984916557
+191655 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>fixedDelay1535984916587
+195069 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>使用cron  1535984920001
+196625 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>使用fixedRate1535984921557
+196657 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>fixedDelay1535984921589
+200068 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>使用cron  1535984925000
+201627 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>使用fixedRate1535984926559
+201660 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>fixedDelay1535984926592
+205071 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>使用cron  1535984930003
+206626 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>使用fixedRate1535984931558
+206662 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>fixedDelay1535984931594
+210068 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>使用cron  1535984935000
+211626 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>使用fixedRate1535984936558
+211663 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>fixedDelay1535984936595
+215069 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>使用cron  1535984940001
+216626 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>使用fixedRate1535984941558
+216664 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>fixedDelay1535984941596
+220070 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>使用cron  1535984945002
+221626 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>使用fixedRate1535984946558
+221666 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>fixedDelay1535984946598
+225069 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>使用cron  1535984950001
+226626 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>使用fixedRate1535984951558
+226667 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>fixedDelay1535984951599
+230069 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>使用cron  1535984955001
+231626 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>使用fixedRate1535984956558
+231668 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>fixedDelay1535984956600
+235069 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>使用cron  1535984960001
+236626 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>使用fixedRate1535984961558
+236669 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>fixedDelay1535984961601
+240069 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>使用cron  1535984965001
+241627 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>使用fixedRate1535984966559
+241671 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>fixedDelay1535984966603
+245068 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>使用cron  1535984970000
+246627 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>使用fixedRate1535984971559
+246673 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>fixedDelay1535984971605
+250071 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>使用cron  1535984975003
+251627 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>使用fixedRate1535984976559
+251674 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>fixedDelay1535984976606
+255070 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>使用cron  1535984980002
+256628 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>使用fixedRate1535984981560
+256676 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>fixedDelay1535984981608
+260069 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>使用cron  1535984985001
+261627 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>使用fixedRate1535984986559
+261677 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>fixedDelay1535984986609
+265068 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>使用cron  1535984990000
+266627 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>使用fixedRate1535984991559
+266680 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>fixedDelay1535984991612
+270069 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>使用cron  1535984995001
+271627 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>使用fixedRate1535984996559
+271680 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>fixedDelay1535984996612
+275070 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>使用cron  1535985000002
+276629 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>使用fixedRate1535985001561
+276683 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>fixedDelay1535985001615
+280069 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>使用cron  1535985005001
+281632 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>使用fixedRate1535985006564
+281684 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>fixedDelay1535985006616
+285069 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>使用cron  1535985010001
+286628 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>使用fixedRate1535985011560
+286685 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>fixedDelay1535985011617
+290070 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>使用cron  1535985015002
+291629 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>使用fixedRate1535985016561
+291688 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>fixedDelay1535985016620
+295069 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>使用cron  1535985020001
+296628 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>使用fixedRate1535985021560
+296690 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>fixedDelay1535985021622
+300068 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>使用cron  1535985025000
+301630 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>使用fixedRate1535985026562
+301691 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>fixedDelay1535985026623
+305069 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>使用cron  1535985030001
+306628 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>使用fixedRate1535985031560
+306693 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>fixedDelay1535985031625
+310070 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>使用cron  1535985035002
+311629 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>使用fixedRate1535985036561
+311695 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>fixedDelay1535985036627
+315068 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>使用cron  1535985040000
+316629 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>使用fixedRate1535985041561
+316696 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>fixedDelay1535985041628
+320069 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>使用cron  1535985045001
+321629 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>使用fixedRate1535985046561
+321698 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>fixedDelay1535985046630
+325069 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>使用cron  1535985050001
+326630 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>使用fixedRate1535985051562
+326700 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>fixedDelay1535985051632
+330068 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>使用cron  1535985055000
+331630 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>使用fixedRate1535985056562
+331701 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>fixedDelay1535985056633
+335069 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>使用cron  1535985060001
+336630 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>使用fixedRate1535985061562
+336702 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>fixedDelay1535985061634
+340069 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>使用cron  1535985065001
+341630 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>使用fixedRate1535985066562
+341703 [pool-3-thread-1] INFO  c.e.d.service.Impl.ScheduledService - =====>>>>>fixedDelay1535985066635
+1516 [restartedMain] INFO  com.example.demo.DemoApplication - Starting DemoApplication on PC-20180812CBGC with PID 3448 (E:\IdeaProjects\self001\target\classes started by Administrator in E:\IdeaProjects\self001)
+1518 [restartedMain] DEBUG com.example.demo.DemoApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+1521 [restartedMain] INFO  com.example.demo.DemoApplication - The following profiles are active: dev
+6339 [pool-1-thread-1] INFO  c.e.demo.timetask.ScheduledService - =====>>>>>使用fixedRate1535985142795
+6340 [pool-1-thread-1] INFO  c.e.demo.timetask.ScheduledService - =====>>>>>fixedDelay1535985142796
+6375 [restartedMain] INFO  com.example.demo.DemoApplication - Started DemoApplication in 5.908 seconds (JVM running for 6.825)
+8545 [pool-1-thread-1] INFO  c.e.demo.timetask.ScheduledService - =====>>>>>使用cron  1535985145001
+11339 [pool-1-thread-1] INFO  c.e.demo.timetask.ScheduledService - =====>>>>>使用fixedRate1535985147795
+11341 [pool-1-thread-1] INFO  c.e.demo.timetask.ScheduledService - =====>>>>>fixedDelay1535985147797
+1406 [restartedMain] INFO  com.example.demo.DemoApplication - Starting DemoApplication on PC-20180812CBGC with PID 1020 (E:\IdeaProjects\self001\target\classes started by Administrator in E:\IdeaProjects\self001)
+1409 [restartedMain] DEBUG com.example.demo.DemoApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+1413 [restartedMain] INFO  com.example.demo.DemoApplication - The following profiles are active: dev
+6720 [taskExecutor-1] INFO  c.e.demo.timetask.ScheduledService - =====>>>>>使用fixedRate1535985274367
+6720 [taskExecutor-2] INFO  c.e.demo.timetask.ScheduledService - =====>>>>>fixedDelay1535985274367
+6749 [restartedMain] INFO  com.example.demo.DemoApplication - Started DemoApplication in 6.235 seconds (JVM running for 7.21)
+7356 [taskExecutor-3] INFO  c.e.demo.timetask.ScheduledService - =====>>>>>使用cron  1535985275003
+11631 [taskExecutor-4] INFO  c.e.demo.timetask.ScheduledService - =====>>>>>使用fixedRate1535985279278
+11707 [taskExecutor-5] INFO  c.e.demo.timetask.ScheduledService - =====>>>>>fixedDelay1535985279353
+12356 [taskExecutor-6] INFO  c.e.demo.timetask.ScheduledService - =====>>>>>使用cron  1535985280003
+16632 [taskExecutor-7] INFO  c.e.demo.timetask.ScheduledService - =====>>>>>使用fixedRate1535985284279
+16707 [taskExecutor-8] INFO  c.e.demo.timetask.ScheduledService - =====>>>>>fixedDelay1535985284354
+17355 [taskExecutor-9] INFO  c.e.demo.timetask.ScheduledService - =====>>>>>使用cron  1535985285002
+21631 [taskExecutor-10] INFO  c.e.demo.timetask.ScheduledService - =====>>>>>使用fixedRate1535985289278
+21708 [taskExecutor-1] INFO  c.e.demo.timetask.ScheduledService - =====>>>>>fixedDelay1535985289355
+22353 [taskExecutor-2] INFO  c.e.demo.timetask.ScheduledService - =====>>>>>使用cron  1535985290000
+26632 [taskExecutor-3] INFO  c.e.demo.timetask.ScheduledService - =====>>>>>使用fixedRate1535985294279
+26710 [taskExecutor-4] INFO  c.e.demo.timetask.ScheduledService - =====>>>>>fixedDelay1535985294357
+27354 [taskExecutor-5] INFO  c.e.demo.timetask.ScheduledService - =====>>>>>使用cron  1535985295001
+31632 [taskExecutor-6] INFO  c.e.demo.timetask.ScheduledService - =====>>>>>使用fixedRate1535985299279
+31711 [taskExecutor-7] INFO  c.e.demo.timetask.ScheduledService - =====>>>>>fixedDelay1535985299358
+32354 [taskExecutor-8] INFO  c.e.demo.timetask.ScheduledService - =====>>>>>使用cron  1535985300001
+1298 [restartedMain] INFO  com.example.demo.DemoApplication - Starting DemoApplication on PC-20180812CBGC with PID 3128 (E:\IdeaProjects\self001\target\classes started by Administrator in E:\IdeaProjects\self001)
+1300 [restartedMain] DEBUG com.example.demo.DemoApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+1302 [restartedMain] INFO  com.example.demo.DemoApplication - The following profiles are active: dev
+6639 [restartedMain] INFO  com.example.demo.DemoApplication - Started DemoApplication in 6.181 seconds (JVM running for 7.068)
+11619 [taskExecutor-1] INFO  c.e.demo.timetask.ScheduledService - =====>>>>>fixedDelay1535985385313
+16614 [taskExecutor-2] INFO  c.e.demo.timetask.ScheduledService - =====>>>>>fixedDelay1535985390308
+21615 [taskExecutor-3] INFO  c.e.demo.timetask.ScheduledService - =====>>>>>fixedDelay1535985395309
+26616 [taskExecutor-4] INFO  c.e.demo.timetask.ScheduledService - =====>>>>>fixedDelay1535985400310
+31617 [taskExecutor-5] INFO  c.e.demo.timetask.ScheduledService - =====>>>>>fixedDelay1535985405311
+33532 [restartedMain] INFO  com.example.demo.DemoApplication - Starting DemoApplication on PC-20180812CBGC with PID 3128 (E:\IdeaProjects\self001\target\classes started by Administrator in E:\IdeaProjects\self001)
+33532 [restartedMain] DEBUG com.example.demo.DemoApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+33532 [restartedMain] INFO  com.example.demo.DemoApplication - The following profiles are active: dev
+35640 [restartedMain] INFO  com.example.demo.DemoApplication - Started DemoApplication in 2.25 seconds (JVM running for 36.068)
+40116 [restartedMain] INFO  com.example.demo.DemoApplication - Starting DemoApplication on PC-20180812CBGC with PID 3128 (E:\IdeaProjects\self001\target\classes started by Administrator in E:\IdeaProjects\self001)
+40116 [restartedMain] DEBUG com.example.demo.DemoApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+40117 [restartedMain] INFO  com.example.demo.DemoApplication - The following profiles are active: dev
+41698 [restartedMain] INFO  com.example.demo.DemoApplication - Started DemoApplication in 1.701 seconds (JVM running for 42.125)
+1714 [restartedMain] INFO  com.example.demo.DemoApplication - Starting DemoApplication on PC-20180812CBGC with PID 4952 (E:\IdeaProjects\self001\target\classes started by Administrator in E:\IdeaProjects\self001)
+1717 [restartedMain] DEBUG com.example.demo.DemoApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+1720 [restartedMain] INFO  com.example.demo.DemoApplication - The following profiles are active: dev
+8646 [restartedMain] INFO  com.example.demo.DemoApplication - Started DemoApplication in 8.101 seconds (JVM running for 9.262)
+28645 [taskExecutor-1] INFO  c.e.demo.timetask.ScheduledService - =====>>>>>fixedDelay1535985479443
+33628 [taskExecutor-2] INFO  c.e.demo.timetask.ScheduledService - =====>>>>>fixedDelay1535985484426
+1349 [restartedMain] INFO  com.example.demo.DemoApplication - Starting DemoApplication on PC-20180812CBGC with PID 4388 (E:\IdeaProjects\self001\target\classes started by Administrator in E:\IdeaProjects\self001)
+1352 [restartedMain] DEBUG com.example.demo.DemoApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+1354 [restartedMain] INFO  com.example.demo.DemoApplication - The following profiles are active: dev
+6652 [restartedMain] INFO  com.example.demo.DemoApplication - Started DemoApplication in 6.203 seconds (JVM running for 7.068)
+11644 [taskExecutor-1] INFO  c.e.demo.timetask.ScheduledService - =====>>>>>fixedDelay1535985811410
+16633 [taskExecutor-2] INFO  c.e.demo.timetask.ScheduledService - =====>>>>>fixedDelay1535985816399
+21634 [taskExecutor-3] INFO  c.e.demo.timetask.ScheduledService - =====>>>>>fixedDelay1535985821400
+26636 [taskExecutor-4] INFO  c.e.demo.timetask.ScheduledService - =====>>>>>fixedDelay1535985826402
+31638 [taskExecutor-5] INFO  c.e.demo.timetask.ScheduledService - =====>>>>>fixedDelay1535985831404
+1438 [restartedMain] INFO  com.example.demo.DemoApplication - Starting DemoApplication on PC-20180812CBGC with PID 4656 (E:\IdeaProjects\self001\target\classes started by Administrator in E:\IdeaProjects\self001)
+1440 [restartedMain] DEBUG com.example.demo.DemoApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+1443 [restartedMain] INFO  com.example.demo.DemoApplication - The following profiles are active: dev
+6515 [restartedMain] INFO  com.example.demo.DemoApplication - Started DemoApplication in 5.995 seconds (JVM running for 6.943)
+11511 [taskExecutor-1] INFO  c.e.demo.timetask.ScheduledService - =====>>>>>fixedDelay1535985933694
+16497 [taskExecutor-2] INFO  c.e.demo.timetask.ScheduledService - =====>>>>>fixedDelay1535985938680
+21499 [taskExecutor-3] INFO  c.e.demo.timetask.ScheduledService - =====>>>>>fixedDelay1535985943682
+26500 [taskExecutor-4] INFO  c.e.demo.timetask.ScheduledService - =====>>>>>fixedDelay1535985948683
+31501 [taskExecutor-5] INFO  c.e.demo.timetask.ScheduledService - =====>>>>>fixedDelay1535985953684
+35138 [restartedMain] INFO  com.example.demo.DemoApplication - Starting DemoApplication on PC-20180812CBGC with PID 4656 (E:\IdeaProjects\self001\target\classes started by Administrator in E:\IdeaProjects\self001)
+35139 [restartedMain] DEBUG com.example.demo.DemoApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+35139 [restartedMain] INFO  com.example.demo.DemoApplication - The following profiles are active: dev
+36671 [restartedMain] INFO  com.example.demo.DemoApplication - Started DemoApplication in 1.644 seconds (JVM running for 37.097)
+47548 [http-nio-8080-exec-1] INFO  c.e.demo.controller.LoginController - ------有人登录------
+47549 [http-nio-8080-exec-1] INFO  c.e.demo.controller.LoginController - username = fengjinman
+47549 [http-nio-8080-exec-1] INFO  c.e.demo.controller.LoginController - password = dashuaige
+47549 [http-nio-8080-exec-1] INFO  c.e.d.service.Impl.UserServiceImpl - ------查询数据库-----
+47812 [http-nio-8080-exec-1] DEBUG c.e.demo.dao.UserDao.queryUser - ==>  Preparing: select * from user where username = ? 
+47834 [http-nio-8080-exec-1] DEBUG c.e.demo.dao.UserDao.queryUser - ==> Parameters: fengjinman(String)
+47850 [http-nio-8080-exec-1] DEBUG c.e.demo.dao.UserDao.queryUser - <==      Total: 1
+47852 [http-nio-8080-exec-1] INFO  c.e.d.service.Impl.UserServiceImpl - 返回结果：db_user = User(id=1, username=fengjinman, password=4edaaafbadba14ac81404398434fcf0e)
+47854 [http-nio-8080-exec-1] INFO  c.e.d.service.Impl.UserServiceImpl - -------登录成功------
+47854 [http-nio-8080-exec-1] INFO  c.e.demo.controller.LoginController - 返回结果：re = Result(result=true, Reason=null)
+71515 [restartedMain] INFO  com.example.demo.DemoApplication - Starting DemoApplication on PC-20180812CBGC with PID 4656 (E:\IdeaProjects\self001\target\classes started by Administrator in E:\IdeaProjects\self001)
+71516 [restartedMain] DEBUG com.example.demo.DemoApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+71516 [restartedMain] INFO  com.example.demo.DemoApplication - The following profiles are active: dev
+72900 [restartedMain] INFO  com.example.demo.DemoApplication - Started DemoApplication in 1.498 seconds (JVM running for 73.326)
+77899 [taskExecutor-1] INFO  c.e.demo.timetask.ScheduledService - =====>>>>>fixedDelay1535986000082
+82896 [taskExecutor-2] INFO  c.e.demo.timetask.ScheduledService - =====>>>>>fixedDelay1535986005079
+87896 [taskExecutor-3] INFO  c.e.demo.timetask.ScheduledService - =====>>>>>fixedDelay1535986010079
+92898 [taskExecutor-4] INFO  c.e.demo.timetask.ScheduledService - =====>>>>>fixedDelay1535986015081
+97899 [taskExecutor-5] INFO  c.e.demo.timetask.ScheduledService - =====>>>>>fixedDelay1535986020082
+102906 [taskExecutor-6] INFO  c.e.demo.timetask.ScheduledService - =====>>>>>fixedDelay1535986025089
+104250 [restartedMain] INFO  com.example.demo.DemoApplication - Starting DemoApplication on PC-20180812CBGC with PID 4656 (E:\IdeaProjects\self001\target\classes started by Administrator in E:\IdeaProjects\self001)
+104251 [restartedMain] DEBUG com.example.demo.DemoApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+104251 [restartedMain] INFO  com.example.demo.DemoApplication - The following profiles are active: dev
+105506 [restartedMain] INFO  com.example.demo.DemoApplication - Started DemoApplication in 1.331 seconds (JVM running for 105.931)
+115488 [restartedMain] INFO  com.example.demo.DemoApplication - Starting DemoApplication on PC-20180812CBGC with PID 4656 (E:\IdeaProjects\self001\target\classes started by Administrator in E:\IdeaProjects\self001)
+115488 [restartedMain] DEBUG com.example.demo.DemoApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+115488 [restartedMain] INFO  com.example.demo.DemoApplication - The following profiles are active: dev
+117131 [restartedMain] INFO  com.example.demo.DemoApplication - Started DemoApplication in 1.711 seconds (JVM running for 117.555)
+121009 [restartedMain] INFO  com.example.demo.DemoApplication - Starting DemoApplication on PC-20180812CBGC with PID 4656 (E:\IdeaProjects\self001\target\classes started by Administrator in E:\IdeaProjects\self001)
+121009 [restartedMain] DEBUG com.example.demo.DemoApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+121009 [restartedMain] INFO  com.example.demo.DemoApplication - The following profiles are active: dev
+123076 [restartedMain] INFO  com.example.demo.DemoApplication - Started DemoApplication in 2.128 seconds (JVM running for 123.5)
+128360 [restartedMain] INFO  com.example.demo.DemoApplication - Starting DemoApplication on PC-20180812CBGC with PID 4656 (E:\IdeaProjects\self001\target\classes started by Administrator in E:\IdeaProjects\self001)
+128360 [restartedMain] DEBUG com.example.demo.DemoApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+128360 [restartedMain] INFO  com.example.demo.DemoApplication - The following profiles are active: dev
+129586 [restartedMain] INFO  com.example.demo.DemoApplication - Started DemoApplication in 1.292 seconds (JVM running for 130.01)
+136454 [restartedMain] INFO  com.example.demo.DemoApplication - Starting DemoApplication on PC-20180812CBGC with PID 4656 (E:\IdeaProjects\self001\target\classes started by Administrator in E:\IdeaProjects\self001)
+136454 [restartedMain] DEBUG com.example.demo.DemoApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+136454 [restartedMain] INFO  com.example.demo.DemoApplication - The following profiles are active: dev
+137999 [restartedMain] INFO  com.example.demo.DemoApplication - Started DemoApplication in 1.638 seconds (JVM running for 138.424)
+142079 [restartedMain] INFO  com.example.demo.DemoApplication - Starting DemoApplication on PC-20180812CBGC with PID 4656 (E:\IdeaProjects\self001\target\classes started by Administrator in E:\IdeaProjects\self001)
+142079 [restartedMain] DEBUG com.example.demo.DemoApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+142079 [restartedMain] INFO  com.example.demo.DemoApplication - The following profiles are active: dev
+143218 [restartedMain] INFO  com.example.demo.DemoApplication - Started DemoApplication in 1.2 seconds (JVM running for 143.641)
+157263 [restartedMain] INFO  com.example.demo.DemoApplication - Starting DemoApplication on PC-20180812CBGC with PID 4656 (E:\IdeaProjects\self001\target\classes started by Administrator in E:\IdeaProjects\self001)
+157263 [restartedMain] DEBUG com.example.demo.DemoApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+157263 [restartedMain] INFO  com.example.demo.DemoApplication - The following profiles are active: dev
+158361 [restartedMain] INFO  com.example.demo.DemoApplication - Started DemoApplication in 1.137 seconds (JVM running for 158.784)
+264106 [restartedMain] INFO  com.example.demo.DemoApplication - Starting DemoApplication on PC-20180812CBGC with PID 4656 (E:\IdeaProjects\self001\target\classes started by Administrator in E:\IdeaProjects\self001)
+264107 [restartedMain] DEBUG com.example.demo.DemoApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+264107 [restartedMain] INFO  com.example.demo.DemoApplication - The following profiles are active: dev
+265342 [restartedMain] INFO  com.example.demo.DemoApplication - Started DemoApplication in 1.299 seconds (JVM running for 265.762)
+1166 [restartedMain] INFO  com.example.demo.DemoApplication - Starting DemoApplication on PC-20180812CBGC with PID 4828 (E:\IdeaProjects\self001\target\classes started by Administrator in E:\IdeaProjects\self001)
+1167 [restartedMain] DEBUG com.example.demo.DemoApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+1169 [restartedMain] INFO  com.example.demo.DemoApplication - The following profiles are active: dev
+1264 [restartedMain] INFO  com.example.demo.DemoApplication - Starting DemoApplication on PC-20180812CBGC with PID 1100 (E:\IdeaProjects\self001\target\classes started by Administrator in E:\IdeaProjects\self001)
+1266 [restartedMain] DEBUG com.example.demo.DemoApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+1268 [restartedMain] INFO  com.example.demo.DemoApplication - The following profiles are active: dev
+1292 [restartedMain] INFO  com.example.demo.DemoApplication - Starting DemoApplication on PC-20180812CBGC with PID 4020 (E:\IdeaProjects\self001\target\classes started by Administrator in E:\IdeaProjects\self001)
+1298 [restartedMain] DEBUG com.example.demo.DemoApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+1300 [restartedMain] INFO  com.example.demo.DemoApplication - The following profiles are active: dev
+6064 [taskExecutor-1] INFO  c.e.demo.timetask.ScheduledService - =====>>>>>使用fixedRate1535986541248
+6091 [restartedMain] INFO  com.example.demo.DemoApplication - Started DemoApplication in 5.637 seconds (JVM running for 6.49)
+9819 [taskExecutor-2] INFO  c.e.demo.timetask.ScheduledService - =====>>>>>使用cron  1535986545003
+11051 [taskExecutor-3] INFO  c.e.demo.timetask.ScheduledService - =====>>>>>使用fixedRate1535986546235
+11053 [taskExecutor-4] INFO  c.e.demo.timetask.ScheduledService - =====>>>>>fixedDelay1535986546237
+14817 [taskExecutor-5] INFO  c.e.demo.timetask.ScheduledService - =====>>>>>使用cron  1535986550001
+16052 [taskExecutor-6] INFO  c.e.demo.timetask.ScheduledService - =====>>>>>使用fixedRate1535986551235
+16053 [taskExecutor-7] INFO  c.e.demo.timetask.ScheduledService - =====>>>>>fixedDelay1535986551237
+19818 [taskExecutor-8] INFO  c.e.demo.timetask.ScheduledService - =====>>>>>使用cron  1535986555002
+21053 [taskExecutor-9] INFO  c.e.demo.timetask.ScheduledService - =====>>>>>使用fixedRate1535986556237
+21056 [taskExecutor-10] INFO  c.e.demo.timetask.ScheduledService - =====>>>>>fixedDelay1535986556240
+1390 [restartedMain] INFO  com.example.demo.DemoApplication - Starting DemoApplication on PC-20180812CBGC with PID 3240 (E:\IdeaProjects\self001\target\classes started by Administrator in E:\IdeaProjects\self001)
+1394 [restartedMain] DEBUG com.example.demo.DemoApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+1398 [restartedMain] INFO  com.example.demo.DemoApplication - The following profiles are active: dev
+5759 [restartedMain] INFO  com.example.demo.DemoApplication - Started DemoApplication in 5.318 seconds (JVM running for 6.188)
+20033 [http-nio-8080-exec-1] INFO  c.e.demo.controller.LoginController - ------有人登录------
+20033 [http-nio-8080-exec-1] INFO  c.e.demo.controller.LoginController - username = fengjinman
+20033 [http-nio-8080-exec-1] INFO  c.e.demo.controller.LoginController - password = dashuaige
+20033 [http-nio-8080-exec-1] INFO  c.e.d.service.Impl.UserServiceImpl - ------查询数据库-----
+20284 [http-nio-8080-exec-1] DEBUG c.e.demo.dao.UserDao.queryUser - ==>  Preparing: select * from user where username = ? 
+20306 [http-nio-8080-exec-1] DEBUG c.e.demo.dao.UserDao.queryUser - ==> Parameters: fengjinman(String)
+20321 [http-nio-8080-exec-1] DEBUG c.e.demo.dao.UserDao.queryUser - <==      Total: 1
+20324 [http-nio-8080-exec-1] INFO  c.e.d.service.Impl.UserServiceImpl - 返回结果：db_user = User(id=1, username=fengjinman, password=4edaaafbadba14ac81404398434fcf0e)
+20325 [http-nio-8080-exec-1] INFO  c.e.d.service.Impl.UserServiceImpl - -------登录成功------
+20325 [http-nio-8080-exec-1] INFO  c.e.demo.controller.LoginController - 返回结果：re = Result(result=true, Reason=null)

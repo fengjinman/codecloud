@@ -6,10 +6,10 @@
 </head>
 <body>
      fail!
-     <script src="jquery-1.7.2.min.js"></script>
+     <script src="../jquery-1.7.2.min.js"></script>
      <script>
          window.onload=function () {
-              alert("服务暂未开启！");
+              alert("babbab！");
 //             $.ajax({
 //                 type:"get",
 //                 url:"",

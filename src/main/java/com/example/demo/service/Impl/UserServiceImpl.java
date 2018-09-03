@@ -5,6 +5,7 @@ import com.example.demo.entity.Result;
 import com.example.demo.entity.User;
 import com.example.demo.service.UserService;
 import com.example.demo.util.MD5Utils;
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,9 +14,10 @@ import org.springframework.stereotype.Service;
  * Created by fengjinman Administrator on 2018/9/3.
  */
 @Service
+@Slf4j
 public class UserServiceImpl implements UserService {
 
-    Logger log = LoggerFactory.getLogger(UserServiceImpl.class);
+//    Logger log = LoggerFactory.getLogger(UserServiceImpl.class);
 
     @Autowired
     UserDao dao;

@@ -5,8 +5,9 @@
     <title>短信群发</title>
 </head>
 <body>
-    <script src="jquery-1.7.2.min.js"></script>
+    <script src="../jquery-1.7.2.min.js"></script>
     <script>
+
         function sendajax(){
             if(check()){
                 $("#form").submit();
@@ -50,11 +51,11 @@
      <form id="form" action="http://localhost:8080/sendMessage">
          输入收件人手机号，多个收件人手机号之间使用逗号分隔:
          <br>
-         <textarea id="manlist" name="manlist" value=""></textarea>
+         <textarea id="manlist" name="manlist" value="15201144824,18904306090"></textarea>
          <br><br>
          输入短信内容:
          <br>
-         <textarea id="message" name="message" value=""></textarea>
+         <textarea id="message" name="message" value="1212"></textarea>
          <br><br>
          <input id="btn_sub" type="button" value="点击发送" onclick="sendajax()">
      </form>
