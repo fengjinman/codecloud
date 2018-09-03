@@ -9,4 +9,6 @@ import com.example.demo.entity.User;
 public interface UserService {
 
     Result checkUser(User user);
+
+    Result registOneUser(User user);
 }

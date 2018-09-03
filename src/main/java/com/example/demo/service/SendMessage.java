@@ -1,5 +1,7 @@
 package com.example.demo.service;
 
+import com.example.demo.entity.Result;
+
 import java.util.List;
 
 /**
@@ -7,5 +9,5 @@ import java.util.List;
  */
 public interface SendMessage {
 
-    String sendMessage(List<String> numberList,String message);
+    Result sendMessage(List<String> numberList, String message);
 }

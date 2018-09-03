@@ -1,5 +1,8 @@
 package com.example.demo.controller;
+import com.example.demo.entity.Result;
 import com.example.demo.service.SendMessage;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -16,6 +19,9 @@ import java.util.Map;
  */
 @Controller
 public class MessageController {
+
+    Logger log = LoggerFactory.getLogger(MessageController.class);
+
     @Resource
     private SendMessage sendMessage;
 //    @RequestMapping("/sendMessage")
@@ -42,6 +48,10 @@ public class MessageController {
 //    }
     @RequestMapping("/sendMessage")
     public String sendMessage(@RequestParam("manlist")String manlist, @RequestParam("message")String message, HttpSession session){
+
+        log.info("-----短信发送------");
+        log.info("电话号码列表："+manlist);
+        log.info("短信内容："+message);
         List<String> numberList = new ArrayList<>();
         if(manlist.contains(",")){
             String[] phonenumbers = manlist.split(",");
@@ -52,15 +62,16 @@ public class MessageController {
         }else{
             numberList.add(manlist);
         }
-        String result = sendMessage.sendMessage(numberList, message);
+        Result re = sendMessage.sendMessage(numberList, message);
 //        ModelAndView modelAndView = new ModelAndView();
-        if("success".equals(result)){
+        log.info("返回结果：re = "+re);
+        if(re.getResult().equals(true)){
 //            modelAndView.setViewName("success");
             return "success";
         }else{
 //            modelAndView.getModel().put("reason",result);
 //            modelAndView.setViewName("fail");
-            session.setAttribute("reason",result);
+            session.setAttribute("reason",re.getReason());
             return "fail";
         }
     }

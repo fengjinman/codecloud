@@ -9,4 +9,7 @@ PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
 	<select id="queryUser" resultType="com.example.demo.entity.User">
 		select * from user where username = #{username}
 	</select>
+	<insert id="insertUser" >
+		insert into user(username,password) values(#{username},#{password})
+	</insert>
 </mapper>

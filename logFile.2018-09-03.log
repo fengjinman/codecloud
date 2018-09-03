@@ -568,3 +568,70 @@
 11034 [http-nio-8080-exec-1] DEBUG c.e.demo.dao.UserDao.queryUser - <==      Total: 1
 11035 [http-nio-8080-exec-1] INFO  c.e.d.service.Impl.UserServiceImpl - 返回结果：db_user = User(id=1, username=fengjinman, password=dashuaige)
 11036 [http-nio-8080-exec-1] INFO  c.e.d.service.Impl.UserServiceImpl - -------登录成功------
+2084 [main] INFO  com.example.demo.DemoApplication - Starting DemoApplication on 8ZMYSDL10U6ZOIW with PID 18332 (F:\fengjinman\target\classes started by Administrator in F:\fengjinman)
+2087 [main] DEBUG com.example.demo.DemoApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+2088 [main] INFO  com.example.demo.DemoApplication - The following profiles are active: dev
+1067 [main] INFO  com.example.demo.DemoApplication - Starting DemoApplication on 8ZMYSDL10U6ZOIW with PID 17984 (F:\fengjinman\target\classes started by Administrator in F:\fengjinman)
+1070 [main] DEBUG com.example.demo.DemoApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+1071 [main] INFO  com.example.demo.DemoApplication - The following profiles are active: dev
+4024 [main] INFO  com.example.demo.DemoApplication - Started DemoApplication in 3.752 seconds (JVM running for 4.458)
+23496 [http-nio-8080-exec-1] INFO  c.e.d.controller.RegistController - -------用户注册-------
+23496 [http-nio-8080-exec-1] INFO  c.e.d.controller.RegistController - username = fengjinman
+23496 [http-nio-8080-exec-1] INFO  c.e.d.controller.RegistController - password = dashuaige
+23669 [http-nio-8080-exec-1] DEBUG c.e.demo.dao.UserDao.queryUser - ==>  Preparing: select * from user where username = ? 
+23685 [http-nio-8080-exec-1] DEBUG c.e.demo.dao.UserDao.queryUser - ==> Parameters: fengjinman(String)
+23696 [http-nio-8080-exec-1] DEBUG c.e.demo.dao.UserDao.queryUser - <==      Total: 1
+23698 [http-nio-8080-exec-1] INFO  c.e.d.service.Impl.UserServiceImpl - ### 不可以注册，已经存在此帐号：db_user = User(id=1, username=fengjinman, password=dashuaige)
+23698 [http-nio-8080-exec-1] INFO  c.e.d.controller.RegistController - 返回结果：re = Result(result=false, Reason=账户已经被注册！)
+65991 [http-nio-8080-exec-4] INFO  c.e.d.controller.RegistController - -------用户注册-------
+65992 [http-nio-8080-exec-4] INFO  c.e.d.controller.RegistController - username = tengxueying
+65993 [http-nio-8080-exec-4] INFO  c.e.d.controller.RegistController - password = dameinv
+65998 [http-nio-8080-exec-4] DEBUG c.e.demo.dao.UserDao.queryUser - ==>  Preparing: select * from user where username = ? 
+65999 [http-nio-8080-exec-4] DEBUG c.e.demo.dao.UserDao.queryUser - ==> Parameters: tengxueying(String)
+66002 [http-nio-8080-exec-4] DEBUG c.e.demo.dao.UserDao.queryUser - <==      Total: 0
+66002 [http-nio-8080-exec-4] INFO  c.e.d.service.Impl.UserServiceImpl - ------可以注册-----
+66003 [http-nio-8080-exec-4] INFO  c.e.d.service.Impl.UserServiceImpl - ------加密完成-----
+66004 [http-nio-8080-exec-4] DEBUG c.e.demo.dao.UserDao.insertUser - ==>  Preparing: insert into user(username,password) values(?,?) 
+66004 [http-nio-8080-exec-4] DEBUG c.e.demo.dao.UserDao.insertUser - ==> Parameters: tengxueying(String), 46b6a843e0cc6898ce7c488f88e36760(String)
+66171 [http-nio-8080-exec-4] DEBUG c.e.demo.dao.UserDao.insertUser - <==    Updates: 1
+66171 [http-nio-8080-exec-4] INFO  c.e.d.service.Impl.UserServiceImpl - ------注册成功！-----
+66171 [http-nio-8080-exec-4] INFO  c.e.d.controller.RegistController - 返回结果：re = Result(result=true, Reason=null)
+156374 [http-nio-8080-exec-7] INFO  c.e.d.controller.RegistController - -------用户注册-------
+156375 [http-nio-8080-exec-7] INFO  c.e.d.controller.RegistController - username = fengjinman
+156376 [http-nio-8080-exec-7] INFO  c.e.d.controller.RegistController - password = dashuaige
+156380 [http-nio-8080-exec-7] DEBUG c.e.demo.dao.UserDao.queryUser - ==>  Preparing: select * from user where username = ? 
+156381 [http-nio-8080-exec-7] DEBUG c.e.demo.dao.UserDao.queryUser - ==> Parameters: fengjinman(String)
+156383 [http-nio-8080-exec-7] DEBUG c.e.demo.dao.UserDao.queryUser - <==      Total: 0
+156383 [http-nio-8080-exec-7] INFO  c.e.d.service.Impl.UserServiceImpl - ------可以注册-----
+156383 [http-nio-8080-exec-7] INFO  c.e.d.service.Impl.UserServiceImpl - ------加密完成-----
+156384 [http-nio-8080-exec-7] DEBUG c.e.demo.dao.UserDao.insertUser - ==>  Preparing: insert into user(username,password) values(?,?) 
+156384 [http-nio-8080-exec-7] DEBUG c.e.demo.dao.UserDao.insertUser - ==> Parameters: fengjinman(String), 4edaaafbadba14ac81404398434fcf0e(String)
+156443 [http-nio-8080-exec-7] DEBUG c.e.demo.dao.UserDao.insertUser - <==    Updates: 1
+156445 [http-nio-8080-exec-7] INFO  c.e.d.service.Impl.UserServiceImpl - ------注册成功！-----
+156445 [http-nio-8080-exec-7] INFO  c.e.d.controller.RegistController - 返回结果：re = Result(result=true, Reason=null)
+1167 [main] INFO  com.example.demo.DemoApplication - Starting DemoApplication on 8ZMYSDL10U6ZOIW with PID 18364 (F:\fengjinman\target\classes started by Administrator in F:\fengjinman)
+1177 [main] DEBUG com.example.demo.DemoApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+1187 [main] INFO  com.example.demo.DemoApplication - The following profiles are active: dev
+4075 [main] INFO  com.example.demo.DemoApplication - Started DemoApplication in 3.886 seconds (JVM running for 4.509)
+13172 [http-nio-8080-exec-1] INFO  c.e.demo.controller.LoginController - ------有人登录------
+13172 [http-nio-8080-exec-1] INFO  c.e.demo.controller.LoginController - username = fengjinman
+13173 [http-nio-8080-exec-1] INFO  c.e.demo.controller.LoginController - password = dashuaige
+13173 [http-nio-8080-exec-1] INFO  c.e.d.service.Impl.UserServiceImpl - ------查询数据库-----
+13341 [http-nio-8080-exec-1] DEBUG c.e.demo.dao.UserDao.queryUser - ==>  Preparing: select * from user where username = ? 
+13357 [http-nio-8080-exec-1] DEBUG c.e.demo.dao.UserDao.queryUser - ==> Parameters: fengjinman(String)
+13369 [http-nio-8080-exec-1] DEBUG c.e.demo.dao.UserDao.queryUser - <==      Total: 1
+13371 [http-nio-8080-exec-1] INFO  c.e.d.service.Impl.UserServiceImpl - 返回结果：db_user = User(id=3, username=fengjinman, password=4edaaafbadba14ac81404398434fcf0e)
+13372 [http-nio-8080-exec-1] INFO  c.e.d.service.Impl.UserServiceImpl - -------登录成功------
+13372 [http-nio-8080-exec-1] INFO  c.e.demo.controller.LoginController - 返回结果：re = Result(result=true, Reason=null)
+1538 [main] INFO  com.example.demo.DemoApplication - Starting DemoApplication on 8ZMYSDL10U6ZOIW with PID 18012 (F:\fengjinman\target\classes started by Administrator in F:\fengjinman)
+1542 [main] DEBUG com.example.demo.DemoApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+1543 [main] INFO  com.example.demo.DemoApplication - The following profiles are active: dev
+3792 [main] INFO  com.example.demo.DemoApplication - Started DemoApplication in 3.522 seconds (JVM running for 4.21)
+1863 [main] INFO  com.example.demo.DemoApplication - Starting DemoApplication on 8ZMYSDL10U6ZOIW with PID 7248 (F:\fengjinman\target\classes started by Administrator in F:\fengjinman)
+1866 [main] DEBUG com.example.demo.DemoApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+1867 [main] INFO  com.example.demo.DemoApplication - The following profiles are active: dev
+4192 [main] INFO  com.example.demo.DemoApplication - Started DemoApplication in 3.775 seconds (JVM running for 4.552)
+24217 [http-nio-8080-exec-3] INFO  c.e.d.controller.MessageController - -----短信发送------
+24217 [http-nio-8080-exec-3] INFO  c.e.d.controller.MessageController - 电话号码列表：15201114824
+24218 [http-nio-8080-exec-3] INFO  c.e.d.controller.MessageController - 短信内容：000
+24218 [http-nio-8080-exec-3] INFO  c.e.d.controller.MessageController - 返回结果：re = Result(result=false, Reason=您的短信服务暂未开通，请联系云服务！)
