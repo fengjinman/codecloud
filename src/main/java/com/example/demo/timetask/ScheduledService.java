@@ -12,21 +12,21 @@ public class ScheduledService {
     /**
      * 三种不同的定时任务 我最喜欢第三种
      */
-    @Scheduled(cron = "0/5 * * * * *")
-    public void scheduled(){
-        log.info("=====>>>>>使用cron  {}",System.currentTimeMillis());
-    }
-    @Scheduled(fixedRate = 5000)
-    public void scheduled1() {
-        log.info("=====>>>>>使用fixedRate{}", System.currentTimeMillis());
-    }
+//    @Scheduled(cron = "0/5 * * * * *")
+//    public void scheduled(){
+//        log.info("=====>>>>>使用cron  {}",System.currentTimeMillis());
+//    }
+//    @Scheduled(fixedRate = 5000)
+//    public void scheduled1() {
+//        log.info("=====>>>>>使用fixedRate{}", System.currentTimeMillis());
+//    }
 
     /**
      * initialDelay 延迟执行
      * fixedDelay   执行间隔
      */
-    @Scheduled(fixedDelay = 5000,initialDelay = 5000)
-    public void scheduled2() {
-        log.info("=====>>>>>fixedDelay{}",System.currentTimeMillis());
-    }
+//    @Scheduled(fixedDelay = 5000,initialDelay = 5000)
+//    public void scheduled2() {
+//        log.info("=====>>>>>fixedDelay{}",System.currentTimeMillis());
+//    }
 }

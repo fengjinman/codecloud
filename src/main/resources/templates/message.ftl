@@ -9,14 +9,31 @@
     <script>
 
         function sendajax(){
-            if(check()){
-                $("#form").submit();
+            var manlist = $("#manlist").val();
+            var message = $("#message").val();
+            if(check(manlist,message)){
+                $.ajax({
+                    url:"http://localhost:8080/sendMessage",
+                    type:"get",
+                    dataType:"json",
+                    data:{
+                        manlist:manlist,
+                        message:message
+                    },
+                    success:function(data){
+                        if(data.result==true){
+                            alert("短信发送成功！");
+                        }else{
+                            alert(data.reason);
+                        }
+                    }
+                });
             }
         }
-        function check(){
-            var manlist = $("#manlist").val();
+        function check(manlist,message){
             if(manlist==null||manlist==""){
                 alert("收件人不能为空！");
+                return;
             }else{
                 if(manlist.indexOf(",")!=-1){
                     var array = manlist.split(",");
@@ -28,22 +45,25 @@
                         }else{
                             if(phonenumber.length!=11){
                                 alert("收件人中有长度不为11的号码，请改正！");
+                                return;
                             }
                         }
                     }
                 }else{
                     if(isNaN(manlist)){
                         alert("收件人手机号码不是数字，请改正！");
+                        return;
                     }else{
                         if(manlist.length!=11){
                             alert("收件人的号码长度不为11，请改正！");
+                            return;
                         }
                     }
                 }
             }
-            var message = $("#message").val();
             if(message==null||message==""){
                 alert("信息内容不能为空！");
+                return;
             }
             return true;
         }

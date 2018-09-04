@@ -24,30 +24,10 @@ public class MessageController {
 
     @Resource
     private SendMessage sendMessage;
-//    @RequestMapping("/sendMessage")
-//    public ModelAndView sendMessage(@RequestParam("manlist")String manlist, @RequestParam("message")String message){
-//        List<String> numberList = new ArrayList<>();
-//        if(manlist.contains(",")){
-//            String[] phonenumbers = manlist.split(",");
-//            for(int i=0;i<phonenumbers.length;i++){
-//                String phonenumber = phonenumbers[i];
-//                numberList.add(phonenumber);
-//            }
-//        }else{
-//            numberList.add(manlist);
-//        }
-//        String result = sendMessage.sendMessage(numberList, message);
-//        ModelAndView modelAndView = new ModelAndView();
-//        if("success".equals(result)){
-//            modelAndView.setViewName("success");
-//        }else{
-//            modelAndView.getModel().put("reason",result);
-//            modelAndView.setViewName("fail");
-//        }
-//        return modelAndView;
-//    }
+
+    @ResponseBody
     @RequestMapping("/sendMessage")
-    public String sendMessage(@RequestParam("manlist")String manlist, @RequestParam("message")String message, HttpSession session){
+    public Result sendMessage(@RequestParam("manlist")String manlist, @RequestParam("message")String message){
 
         log.info("-----短信发送------");
         log.info("电话号码列表："+manlist);
@@ -63,29 +43,14 @@ public class MessageController {
             numberList.add(manlist);
         }
         Result re = sendMessage.sendMessage(numberList, message);
-//        ModelAndView modelAndView = new ModelAndView();
         log.info("返回结果：re = "+re);
-        if(re.getResult().equals(true)){
-//            modelAndView.setViewName("success");
-            return "success";
-        }else{
-//            modelAndView.getModel().put("reason",result);
-//            modelAndView.setViewName("fail");
-            session.setAttribute("reason",re.getReason());
-            return "fail";
-        }
+        return re;
     }
+
     @RequestMapping("/message")
     public String message(){
         return "message";
     }
-    @ResponseBody
-    @RequestMapping("/yy")
-    public Object getReason(){
-        Map result = new HashMap<>();
-        result.put("result","success");
-        result.put("reason","服务暂未开启！");
-        System.out.println("数据返回");
-        return result;
-    }
+
+
 }

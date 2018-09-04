@@ -48,6 +48,7 @@
 			<artifactId>mysql-connector-java</artifactId>
 			<scope>runtime</scope>
 		</dependency>
+
 		<!--lombok-->
 		<dependency>
 			<groupId>org.projectlombok</groupId>
@@ -60,34 +61,11 @@
 			<scope>test</scope>
 		</dependency>
 
-		<!--定时任务-->
-
-		<!--<dependency>-->
-			<!--<groupId>org.springframework</groupId>-->
-			<!--<artifactId>spring-context-support</artifactId>-->
-			<!--<version>4.1.6.RELEASE</version>-->
-		<!--</dependency>-->
-		<!--<dependency>-->
-			<!--<groupId>org.quartz-scheduler</groupId>-->
-			<!--<artifactId>quartz</artifactId>-->
-			<!--<version>2.2.1</version>-->
-		<!--</dependency>-->
-		<!--<dependency>-->
-			<!--<groupId>org.quartz-scheduler</groupId>-->
-			<!--<artifactId>quartz-jobs</artifactId>-->
-			<!--<version>2.2.1</version>-->
-		<!--</dependency>-->
-
 		<!--freemarker-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-freemarker</artifactId>
 		</dependency>
-
-		<!--<dependency>-->
-			<!--<groupId>org.springframework.boot</groupId>-->
-			<!--<artifactId>spring-boot-starter-thymeleaf</artifactId>-->
-		<!--</dependency>-->
 
         <!--热部署-->
 		<dependency>
@@ -95,6 +73,19 @@
 			<artifactId>spring-boot-devtools</artifactId>
 			<optional>true</optional>
 		</dependency>
+
+		<!-- 数据库连接池 -->
+		<dependency>
+			<groupId>com.zaxxer</groupId>
+			<artifactId>HikariCP</artifactId>
+		</dependency>
+
+		<!--aop-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-aop</artifactId>
+		</dependency>
+
 	</dependencies>
 
 	<build>

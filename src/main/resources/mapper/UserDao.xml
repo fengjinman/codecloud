@@ -12,4 +12,14 @@ PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
 	<insert id="insertUser" >
 		insert into user(username,password) values(#{username},#{password})
 	</insert>
+	<!--测试-->
+	<select id="selectByOddUserId" resultType="com.example.demo.entity.User">
+		select * from user where id = #{id}
+	</select>
+	<select id="selectByEvenUserId" resultType="com.example.demo.entity.User">
+		select * from user where id = #{id}
+	</select>
+	<select id="queryUserById" resultType="com.example.demo.entity.User">
+		select * from user where id = #{id}
+	</select>
 </mapper>
