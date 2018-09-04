@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <#assign ctx = request.contextPath />
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
@@ -9,6 +10,6 @@
     登陆成功！
     welcome! ${username}
     <br>
-    <a href="http://localhost:8080/message">群发短信</a>
+    <a href="${ctx}/message">群发短信</a>
 </body>
 </html>

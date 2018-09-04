@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <#assign ctx = request.contextPath />
     <meta charset="UTF-8">
     <title>短信群发</title>
 </head>
@@ -13,7 +14,7 @@
             var message = $("#message").val();
             if(check(manlist,message)){
                 $.ajax({
-                    url:"http://localhost:8080/sendMessage",
+                    url:"${ctx}/sendMessage",
                     type:"get",
                     dataType:"json",
                     data:{
@@ -68,7 +69,7 @@
             return true;
         }
     </script>
-     <form id="form" action="http://localhost:8080/sendMessage">
+     <form >
          输入收件人手机号，多个收件人手机号之间使用逗号分隔:
          <br>
          <textarea id="manlist" name="manlist" value="15201144824,18904306090"></textarea>

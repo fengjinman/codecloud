@@ -1,23 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <#assign ctx = request.contextPath />
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
+
 
     <title>Sign in</title>
 
 
 
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <#--<!-- IE10 viewport hack for Surface/desktop Windows 8 bug &ndash;&gt;-->
+    <#--<link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">-->
 
-    <!-- Custom styles for this template -->
-    <link href="signin.css" rel="stylesheet">
+    <#--<!-- Custom styles for this template &ndash;&gt;-->
+    <#--<link href="signin.css" rel="stylesheet">-->
 
     <!-- Bootstrap -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
@@ -31,16 +32,15 @@
      * 1: onclick不可以绑定method方法（有可能是对于js有特殊含义的，还一个其他的名称即可）
      *
      * bootstrap中文网：http://www.bootcss.com/
-     *
-     * 网站布局可以参照其他，设计的大气一点，不要那么传统死板
-     * 还要方便用户 注意用户体验
      */
     function sendajax() {
+
+        console.log("${ctx}")
         var username = $("#username").val();
         var password = $("#password").val();
         if(check(username,password)){
             $.ajax({
-                url:"http://localhost:8080/login",
+                url:"${ctx}/login",
                 data:{
                   username:username,
                   password:password
@@ -51,7 +51,7 @@
                     console.log(data);
                     if(data.result==true){
                         alert("登录成功！");
-                        window.location.href="http://localhost:8080/welcome";
+                        window.location.href="${ctx}/welcome";
                     }else{
                         alert(data.reason);
                         return;
@@ -71,20 +71,16 @@
             return true;
         }
     }
-    //        window.onload=function () {
-    //            alert("你好，我是js");
-    //        }
-    //改成ajax
 </script>
     <#--<div align="center" style="margin-top: 300px">-->
-        <#--<form id="formId" action="http://localhost:8080/login">-->
+        <#--<form id="formId" action="http://${ctx}:8888/login">-->
             <#--账号：<input  id="username" name="username" value="fengjinman" /><br><br>-->
             <#--密码：<input  id="password" name="password" value="dashuaige" /><br><br>-->
             <#--<button type="button" class="btn btn-lg btn-success" onclick="sendajax()">点击登录</button>-->
         <#--</form>-->
 
     <#--</div>-->
-    <div class="container" style="margin-top: 80px;margin-right: 0px" >
+    <div class="container" style="margin-top: 50px;margin-right: 0px">
 
     <form class="form-signin">
         <h2 class="form-signin-heading">Please sign in</h2>
@@ -97,9 +93,11 @@
                 <input type="checkbox" value="remember-me"> Remember me
             </label>
         </div>
-        <button class="btn btn-lg btn-success" type="submit" onclick="sendajax()">Sign in</button>
+        <button class="btn btn-lg btn-success" type="button" onclick="sendajax()">Sign in</button>
     </form>
 
 </div>
+
+
 </body>
 </html>
