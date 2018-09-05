@@ -2,6 +2,7 @@ package com.example.demo.controller;
 
 import com.example.demo.entity.Brand;
 import com.example.demo.entity.Result;
+import com.example.demo.entity.Spu;
 import com.example.demo.service.PublishService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -25,11 +26,21 @@ public class PublishController {
     }
 
     @RequestMapping("/brand")
-    public Result publishClass(@RequestParam("classid")Integer classid,@RequestParam("brandname")String brandname){
+    public Result publishBrand(@RequestParam("classid")Integer classid,@RequestParam("brandname")String brandname){
         Brand brand = new Brand();
         brand.setClassid(classid);
         brand.setBrandname(brandname);
         Result re = service.addBrand(brand);
+        return re;
+    }
+
+    @RequestMapping("/spu")
+    public Result publishSpu(@RequestParam("brandid")Integer brandid,@RequestParam("classid")Integer classid,@RequestParam("spuname")String spuname){
+        Spu spu = new Spu();
+        spu.setBrandid(brandid);
+        spu.setClassid(classid);
+        spu.setSpuname(spuname);
+        Result re = service.addSpu(spu);
         return re;
     }
 }

@@ -19,4 +19,12 @@
         select count(*) from brand where brandname = #{brandname} and classid = #{classid}
         ]]>
     </select>
+    <insert id="insertSpu" >
+        <![CDATA[insert into spu(classid,brandid,spuname) values(#{classid},#{brandid},#{spuname})]]>
+    </insert>
+    <select id="selectSpu" resultType="int">
+        <![CDATA[
+        select count(*) from spu where spuname = #{spuname} and classid = #{classid} and brandid = #{brandid}
+        ]]>
+    </select>
 </mapper>
