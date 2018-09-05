@@ -3,100 +3,139 @@
 <head>
     <#assign ctx = request.contextPath />
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-
-    <title>Sign in</title>
-
-
-
-    <#--<!-- IE10 viewport hack for Surface/desktop Windows 8 bug &ndash;&gt;-->
-    <#--<link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">-->
-
-    <#--<!-- Custom styles for this template &ndash;&gt;-->
-    <#--<link href="signin.css" rel="stylesheet">-->
-
-    <!-- Bootstrap -->
+    <title>First page</title>
     <link href="../css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 <script src="../jquery-1.7.2.min.js"></script>
 <link href="../js/bootstrap.min.js">
 <script>
-    /**
-     * js大坑记录：
-     * 1: onclick不可以绑定method方法（有可能是对于js有特殊含义的，还一个其他的名称即可）
-     *
-     * bootstrap中文网：http://www.bootcss.com/
-     */
-    function sendajax() {
+//    $('.carousel').carousel();
 
-        console.log("${ctx}")
-        var username = $("#username").val();
-        var password = $("#password").val();
-        if(check(username,password)){
-            $.ajax({
-                url:"${ctx}/login",
-                data:{
-                  username:username,
-                  password:password
-                },
-                dataType:"json",
-                type:"post",
-                success:function (data){
-                    console.log(data);
-                    if(data.result==true){
-                        alert("登录成功！");
-                        window.location.href="${ctx}/welcome";
-                    }else{
-                        alert(data.reason);
-                        return;
-                    }
-                }
-            });
-        }
-    }
-
-    function check(username,password){
-        console.log(username);
-        console.log(password);
-        if(username==""||password==""){
-            alert("账号密码不能为空！");
-            return;
-        }else{
-            return true;
-        }
-    }
 </script>
-    <#--<div align="center" style="margin-top: 300px">-->
-        <#--<form id="formId" action="http://${ctx}:8888/login">-->
-            <#--账号：<input  id="username" name="username" value="fengjinman" /><br><br>-->
-            <#--密码：<input  id="password" name="password" value="dashuaige" /><br><br>-->
-            <#--<button type="button" class="btn btn-lg btn-success" onclick="sendajax()">点击登录</button>-->
-        <#--</form>-->
 
+    <#--固定在最上方-->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <h3>顶部</h3>
+            <a href="${ctx}/loginPage"><h1>登录</h1></a>
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <#--<div class="navbar-header">-->
+                <#--<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">-->
+                    <#--<span class="sr-only">Toggle navigation</span>-->
+                    <#--<span class="icon-bar"></span>-->
+                    <#--<span class="icon-bar"></span>-->
+                    <#--<span class="icon-bar"></span>-->
+                <#--</button>-->
+                <#--<a class="navbar-brand" href="#">Brand</a>-->
+            <#--</div>-->
+
+            <#--<!-- Collect the nav links, forms, and other content for toggling &ndash;&gt;-->
+            <#--<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">-->
+                <#--<ul class="nav navbar-nav">-->
+                    <#--<li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>-->
+                    <#--<li><a href="#">Link</a></li>-->
+                    <#--<li class="dropdown">-->
+                        <#--<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>-->
+                        <#--<ul class="dropdown-menu">-->
+                            <#--<li><a href="#">Action</a></li>-->
+                            <#--<li><a href="#">Another action</a></li>-->
+                            <#--<li><a href="#">Something else here</a></li>-->
+                            <#--<li role="separator" class="divider"></li>-->
+                            <#--<li><a href="#">Separated link</a></li>-->
+                            <#--<li role="separator" class="divider"></li>-->
+                            <#--<li><a href="#">One more separated link</a></li>-->
+                        <#--</ul>-->
+                    <#--</li>-->
+                <#--</ul>-->
+                <#--<form class="navbar-form navbar-left">-->
+                    <#--<div class="form-group">-->
+                        <#--<input type="text" class="form-control" placeholder="Search">-->
+                    <#--</div>-->
+                    <#--<button type="submit" class="btn btn-default">Submit</button>-->
+                <#--</form>-->
+                <#--<ul class="nav navbar-nav navbar-right">-->
+                    <#--<li><a href="#">Link</a></li>-->
+                    <#--<li class="dropdown">-->
+                        <#--<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>-->
+                        <#--<ul class="dropdown-menu">-->
+                            <#--<li><a href="#">Action</a></li>-->
+                            <#--<li><a href="#">Another action</a></li>-->
+                            <#--<li><a href="#">Something else here</a></li>-->
+                            <#--<li role="separator" class="divider"></li>-->
+                            <#--<li><a href="#">Separated link</a></li>-->
+                        <#--</ul>-->
+                    <#--</li>-->
+                <#--</ul>-->
+            <#--</div><!-- /.navbar-collapse &ndash;&gt;-->
+        </div><!-- /.container-fluid -->
+    </nav>
+
+
+
+
+
+
+
+
+
+
+
+    <#--滚屏-->
+    <#--<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">-->
+        <#--<!-- Indicators &ndash;&gt;-->
+        <#--<ol class="carousel-indicators">-->
+            <#--<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>-->
+            <#--<li data-target="#carousel-example-generic" data-slide-to="1"></li>-->
+            <#--<li data-target="#carousel-example-generic" data-slide-to="2"></li>-->
+        <#--</ol>-->
+
+        <#--<!-- Wrapper for slides &ndash;&gt;-->
+        <#--<div class="carousel-inner" role="listbox">-->
+            <#--<div class="item active">-->
+                <#--<img src="../img/3.jpg" alt="...">-->
+                <#--<div class="carousel-caption">-->
+                    <#--<h1>1</h1>-->
+                <#--</div>-->
+            <#--</div>-->
+            <#--<div class="item">-->
+                <#--<img src="../img/2.jpg" alt="...">-->
+                <#--<div class="carousel-caption">-->
+                    <#--<h1>2</h1>-->
+                <#--</div>-->
+            <#--</div>-->
+            <#--<div class="item">-->
+                <#--<img src="../img/1.jpg" alt="...">-->
+                <#--<div class="carousel-caption">-->
+                    <#--<h1>3</h1>-->
+                <#--</div>-->
+            <#--</div>-->
+
+        <#--</div>-->
+
+        <#--<!-- Controls &ndash;&gt;-->
+        <#--<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">-->
+            <#--<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>-->
+            <#--<span class="sr-only">Previous</span>-->
+        <#--</a>-->
+        <#--<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">-->
+            <#--<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>-->
+            <#--<span class="sr-only">Next</span>-->
+        <#--</a>-->
     <#--</div>-->
-    <div class="container" style="margin-top: 50px;margin-right: 0px">
 
-    <form class="form-signin">
-        <h2 class="form-signin-heading">Please sign in</h2>
-        <label for="username" class="sr-only">username</label>
-        <input type="text" id="username" class="form-control" placeholder="username" style="width: 17%" value="fengjinman" required="" autofocus="">
-        <label for="password" class="sr-only">Password</label>
-        <input type="password" id="password" class="form-control" placeholder="password" style="width: 17%" value="dashuaige" required="">
-        <div class="checkbox">
-            <label>
-                <input type="checkbox" value="remember-me"> Remember me
-            </label>
+
+
+
+
+
+
+    <#--固定在底部-->
+    <nav class="navbar navbar-default navbar-fixed-bottom">
+        <div class="container">
+            <h3>底部</h3>
         </div>
-        <button class="btn btn-lg btn-success" type="button" onclick="sendajax()">Sign in</button>
-    </form>
-
-</div>
+    </nav>
 
 
 </body>

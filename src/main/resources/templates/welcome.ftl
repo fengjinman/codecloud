@@ -10,6 +10,7 @@
     登陆成功！
     welcome! ${username}
     <br>
-    <a href="${ctx}/message">群发短信</a>
+    <a href="${ctx}/message">群发短信</a><br>
+    <a href="${ctx}/makeSkuPage">商品发布</a>
 </body>
 </html>

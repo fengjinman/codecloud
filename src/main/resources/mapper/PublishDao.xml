@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
+        "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.dao.PublishDao">
+    <insert id="insertClass" >
+        <![CDATA[insert into bigclass(classname) values(#{classname})]]>
+    </insert>
+    <select id="selectClass" resultType="int">
+        <![CDATA[
+        select count(*) from bigclass where classname = #{classname}
+        ]]>
+    </select>
+    <insert id="insertBrand" >
+        <![CDATA[insert into brand(classid,brandname) values(#{classid},#{brandname})]]>
+    </insert>
+    <select id="selectBrand" resultType="int">
+        <![CDATA[
+        select count(*) from brand where brandname = #{brandname} and classid = #{classid}
+        ]]>
+    </select>
+</mapper>

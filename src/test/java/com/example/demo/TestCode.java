@@ -1,5 +1,7 @@
 package com.example.demo;
 import org.junit.Test;
+
+import java.text.DecimalFormat;
 import java.time.LocalDateTime;
 import java.util.*;
 import java.util.stream.Stream;
@@ -7,6 +9,14 @@ import java.util.stream.Stream;
  * Created by fengjinman Administrator on 2018/8/27.
  */
 public class TestCode {
+
+    @Test
+    public void test66(){
+        String skuprice = "2500.00";
+        DecimalFormat d = new DecimalFormat("0.00");
+        String format = d.format(Double.parseDouble(skuprice));
+        System.out.println(format);
+    }
     @Test
     public void test1(){
         List list1 = new ArrayList<>();
