@@ -15,4 +15,12 @@ public class Spu {
     int classid;
 
     int brandid;
+
+    String img;
+
+    String describtion;
+
+    String price;
+
+    String unit;
 }

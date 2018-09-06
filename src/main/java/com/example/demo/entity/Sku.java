@@ -28,15 +28,17 @@ public class Sku {
      */
     int id;
 
-    String userid;
+    String skuname;
 
-    String classid;
+    Integer userid;
 
-    String brandid;
+    Integer classid;
 
-    String spuid;
+    Integer brandid;
 
-    String attrid;
+    Integer spuid;
+
+    Integer attrid;
 
     String price;
 

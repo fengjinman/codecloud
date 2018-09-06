@@ -1,6 +1,7 @@
 package com.example.demo.dao;
 
 import com.example.demo.datasource.TargetDataSource;
+import com.example.demo.entity.Attr;
 import com.example.demo.entity.Brand;
 import com.example.demo.entity.Spu;
 import org.apache.ibatis.annotations.Mapper;
@@ -31,4 +32,11 @@ public interface PublishDao {
 
     @TargetDataSource("test2")
     int insertSpu(Spu spu);
+
+    //属性
+    @TargetDataSource("test2")
+    int selectAttr(Attr attr);
+
+    @TargetDataSource("test2")
+    int insertAttr(Attr attr);
 }

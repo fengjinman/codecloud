@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper
         PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
-        "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.example.demo.dao.PublishDao">
     <insert id="insertClass" >
         <![CDATA[insert into bigclass(classname) values(#{classname})]]>
@@ -20,11 +20,19 @@
         ]]>
     </select>
     <insert id="insertSpu" >
-        <![CDATA[insert into spu(classid,brandid,spuname) values(#{classid},#{brandid},#{spuname})]]>
+        <![CDATA[insert into spu(classid,brandid,spuname,img,price,unit,describtion) values(#{classid},#{brandid},#{spuname},#{img},#{price},#{unit},#{describtion})]]>
     </insert>
     <select id="selectSpu" resultType="int">
         <![CDATA[
         select count(*) from spu where spuname = #{spuname} and classid = #{classid} and brandid = #{brandid}
+        ]]>
+    </select>
+    <insert id="insertAttr" >
+        <![CDATA[insert into attr(spuid,color,size,size_unit,attr_img) values(#{spuid},#{color},#{size},#{size_unit},#{attr_img})]]>
+    </insert>
+    <select id="selectAttr" resultType="int">
+        <![CDATA[
+        select count(*) from attr where spuid = #{spuid} and color = #{color} and size = #{size} and size_unit = #{size_unit}
         ]]>
     </select>
 </mapper>

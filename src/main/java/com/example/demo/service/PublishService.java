@@ -1,5 +1,6 @@
 package com.example.demo.service;
 
+import com.example.demo.entity.Attr;
 import com.example.demo.entity.Brand;
 import com.example.demo.entity.Result;
 import com.example.demo.entity.Spu;
@@ -14,6 +15,10 @@ public interface PublishService {
      Result addBrand(Brand brand);
 
      Result addSpu(Spu spu);
+
+     Result addAttr(Attr attr);
+
+
 
 
 }

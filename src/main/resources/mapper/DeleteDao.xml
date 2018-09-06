@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.dao.DeleteDao">
+
+    <!--@TargetDataSource("test2")-->
+    <!--int deleteClass(Integer classid);-->
+    <delete id="deleteClass">
+        delete from bigclass where id = #{classid}
+    </delete>
+
+    <!--@TargetDataSource("test2")-->
+    <!--int deleteBrand(Integer brandid);-->
+    <delete id="deleteBrand">
+        delete from brand where id = #{brandid}
+    </delete>
+
+    <!--@TargetDataSource("test2")-->
+    <!--int deleteSpu(Integer spuid);-->
+    <delete id="deleteSpu">
+        delete from spu where id = #{spuid}
+    </delete>
+
+
+    <!--@TargetDataSource("test2")-->
+    <!--int deleteAttr(Integer attrid);-->
+    <delete id="deleteAttr">
+        delete from attr where id = #{attrid}
+    </delete>
+
+    <!--@TargetDataSource("test2")-->
+    <!--int deleteSku(Integer skuid);-->
+    <delete id="deleteSku">
+        delete from sku where id = #{skuid}
+    </delete>
+    <!--//批量-->
+    <!--@TargetDataSource("test2")-->
+    <!--int deleteClassByList(List<Integer> classids);-->
+    <delete id="deleteClassByList">
+        delete from bigclass where id in
+        <foreach item="classid" collection="list" open="(" separator="," close=")">
+            #{classid}
+        </foreach>
+    </delete>
+
+    <!--@TargetDataSource("test2")-->
+    <!--int deleteBrandByList(List<Integer> brandids);-->
+    <delete id="deleteBrandByList">
+        delete from brand where id in
+        <foreach item="brandid" collection="list" open="(" separator="," close=")">
+            #{brandid}
+        </foreach>
+    </delete>
+
+    <!--@TargetDataSource("test2")-->
+    <!--int deleteSpuByList(List<Integer> spuids);-->
+    <delete id="deleteSpuByList">
+        delete from spu where id in
+        <foreach item="spuid" collection="list" open="(" separator="," close=")">
+            #{spuid}
+        </foreach>
+    </delete>
+
+    <!--@TargetDataSource("test2")-->
+    <!--int deleteAttrByList(List<Integer> attrids);-->
+    <delete id="deleteAttrByList">
+        delete from attr where id in
+        <foreach item="attrid" collection="list" open="(" separator="," close=")">
+            #{attrid}
+        </foreach>
+    </delete>
+
+    <!--@TargetDataSource("test2")-->
+    <!--int deleteSkuByList(List<Integer> skuids);-->
+    <delete id="deleteSkuByList">
+        delete from sku where id in
+        <foreach item="skuid" collection="list" open="(" separator="," close=")">
+            #{skuid}
+        </foreach>
+    </delete>
+
+</mapper>

@@ -1,26 +1,66 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper
         PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
-        "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.example.demo.dao.SkuDao">
     <insert id="insertSku" >
         <![CDATA[
         insert into sku(
-        username,
         skuname,
-        skuprice,
+        userid,
+        classid,
+        brandid,
+        spuid,
+        attrid,
+        price,
         unit,
         describtion,
-        img
+        stock_count,
+        stock_address
         ) values(
-        #{username},
         #{skuname},
-        #{skuprice},
+        #{userid},
+        #{classid},
+        #{brandid},
+        #{spuid},
+        #{attrid},
+        #{price},
         #{unit},
         #{describtion},
-        #{img}
+        #{stock_count},
+        #{stock_address}
         )
         ]]>
     </insert>
+
+
+    <select id="selectSku" resultType="int">
+        <![CDATA[
+        select count(*) from sku
+        where
+        userid = #{userid}  and
+        classid = #{classid} and
+        brandid = #{brandid} and
+        spuid = #{spuid} and
+        attrid = #{attrid}
+        ]]>
+    </select>
+
+    <select id="querySpuListByLook" resultType="com.example.demo.entity.Spu">
+        select * from spu
+    </select>
+    <select id="querySkuListByInfo" resultType="com.example.demo.entity.Sku">
+        select * from sku where spuid = #{spuid}
+    </select>
+    <select id="getPhoto" resultType="java.lang.String">
+        select img from spu where id = #{spuid}
+    </select>
+    <select id="getBrand" resultType="java.lang.String">
+        select brandname from brand where id = #{brandid}
+    </select>
+
+    <select id="getAttr" resultType="com.example.demo.entity.Attr">
+         select * from attr where id = #{attrid}
+    </select>
 
 </mapper>

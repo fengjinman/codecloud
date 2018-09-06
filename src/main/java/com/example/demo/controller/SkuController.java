@@ -2,20 +2,17 @@ package com.example.demo.controller;
 
 import com.example.demo.entity.Result;
 import com.example.demo.entity.Sku;
-import com.example.demo.entity.User;
 import com.example.demo.service.SkuService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.multipart.MultipartFile;
 import javax.servlet.http.HttpSession;
-import java.io.*;
 import java.text.DecimalFormat;
+import java.util.List;
+import java.util.Map;
 
 /**
  * Created by fengjinman Administrator on 2018/9/5.
@@ -33,51 +30,83 @@ public class SkuController {
         return "makeSku";
     }
 
-    @Value("${photoPath}")
-    String photoPath;
+//    String skuname;
+//    String userid;
+//    String classid;
+//    String brandid;
+//    String spuid;
+//    String attrid;
+//    String price;
+//    String unit;
+//    String describtion;
+//    String stock_count;
+
+    /**
+     * 商品展示页
+     */
+    @ResponseBody
+    @RequestMapping("/spu/look")
+    public Object querySkuListByLook(){
+        List<Map<String,Object>> list = service.querySpuListByLook();
+        return list;
+    }
+
+    /**
+     * 商品详情页
+     */
+    @ResponseBody
+    @RequestMapping("/sku/info")
+    public Object querySkuListByInfo(Integer spuid){
+        List<Map<String,Object>> list = service.querySkuListByInfo(spuid);
+        return list;
+    }
 
 
     @ResponseBody
-    @RequestMapping(value="/upload",method = RequestMethod.POST)
+    @RequestMapping(value="/add/sku")
     public Result upload(@RequestParam("skuname")String skuname,
-                         @RequestParam("skuprice")String skuprice,
+                         @RequestParam("userid")Integer userid,
+                         @RequestParam("classid")Integer classid,
+                         @RequestParam("brandid")Integer brandid,
+                         @RequestParam("spuid")Integer spuid,
+                         @RequestParam("attrid")Integer attrid,
+                         @RequestParam("price")String price,
                          @RequestParam("unit")String unit,
-                         @RequestParam("desc")String desc,
-                         @RequestParam("img")MultipartFile img,
+                         @RequestParam("describtion")String describtion,
+                         @RequestParam("stock_count")String stock_count,
+                         @RequestParam("stock_address")String stock_address,
                          HttpSession se) throws Exception{
-        log.info("------商品上传------");
-        log.info("商品名称："+skuname);
-        log.info("商品价格："+skuprice);
+        log.info("------库存单元发布------");
+        log.info("名称："+skuname);
+        log.info("价格："+price);
         log.info("价格单位："+unit);
-        log.info("商品描述："+desc);
-        log.info("图片对象："+img.toString());
-        Result re = null;
-        try {
-            String originalFilename = img.getOriginalFilename();
-            String newName = System.currentTimeMillis() + "_" + originalFilename;
-            File localimg = new File(photoPath,newName);
-            img.transferTo(localimg);
-            log.info("-------上传完成!-----");
-            User user = (User) se.getAttribute("user");
-            if(user!=null){
+        log.info("描述："+describtion);
+        log.info("商家id："+userid);
+        log.info("分类id："+classid);
+        log.info("品牌id："+brandid);
+        log.info("商品id："+spuid);
+        log.info("属性id："+attrid);
+        log.info("库存数量："+stock_count);
+        log.info("库存地址："+stock_address);
 
-                DecimalFormat d = new DecimalFormat("0.00");
-                skuprice = d.format(Float.parseFloat(skuprice));
-                Sku sku = new Sku();
-//                sku.setUsername(user.getUsername());
-//                sku.setSkuname(skuname);
-//                sku.setSkuprice(skuprice);
-//                sku.setUnit(unit);
-//                sku.setDescribtion(desc);
-//                sku.setImg(newName);
-                re = service.addSku(sku);
-            }else{
-                re.setResult(false);
-                re.setReason("请登录后再次操作！");
-            }
-        } catch (Exception e) {
-            log.error("",e);
-        }
+
+        Sku sku = new Sku();
+        sku.setSkuname(skuname);
+        sku.setUserid(userid);
+        sku.setClassid(classid);
+        sku.setBrandid(brandid);
+        sku.setSpuid(spuid);
+        sku.setAttrid(attrid);
+        DecimalFormat d = new DecimalFormat("0.00");
+        price = d.format(Float.parseFloat(price));
+        sku.setPrice(price);
+        sku.setUnit(unit);
+        sku.setDescribtion(describtion);
+        sku.setStock_count(stock_count);
+        sku.setStock_address(stock_address);
+
+        Result re = service.addSku(sku);
+
         return re;
     }
 }
