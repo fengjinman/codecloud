@@ -13,4 +13,14 @@ public class User {
     String username;
 
     String password;
+
+    String Email;
+
+    String phonenumber;
+
+    String address;
+
+    String head_img;
+
+    String nickname;
 }

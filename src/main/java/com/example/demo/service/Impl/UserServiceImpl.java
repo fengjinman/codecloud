@@ -23,6 +23,25 @@ public class UserServiceImpl implements UserService {
     UserDao dao;
 
     @Override
+    public Result addSelfInfo(User user) {
+        Result re = new Result();
+        User db_user = dao.queryUser(user);
+        if(db_user == null){
+            re.setResult(false);
+            re.setReason("查无此人！");
+        }else{
+            int num = dao.updateInfoByUser(user);
+            if(num == 1){
+                re.setResult(true);
+            }else{
+                re.setResult(false);
+                re.setReason("插入数据库失败！");
+            }
+        }
+        return re;
+    }
+
+    @Override
     public Result registOneUser(User user) {
         Result re = new Result();
         User db_user = dao.queryUser(user);

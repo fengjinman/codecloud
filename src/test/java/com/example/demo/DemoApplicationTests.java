@@ -1,12 +1,10 @@
 package com.example.demo;
 
-import com.example.demo.entity.Attr;
-import com.example.demo.entity.Result;
-import com.example.demo.entity.Sku;
-import com.example.demo.entity.Spu;
+import com.example.demo.entity.*;
 import com.example.demo.service.DeleteService;
 import com.example.demo.service.PublishService;
 import com.example.demo.service.SkuService;
+import com.example.demo.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -24,12 +22,30 @@ import java.util.List;
 @SpringBootTest
 public class DemoApplicationTests {
 
+	@Autowired
+	UserService userService;
+
+
 	 @Autowired
 	PublishService service;
 
 	 @Autowired
 	SkuService skuService;
 
+	@Test
+	public void usertest() {
+
+		User user = new User();
+		user.setAddress("流沙河畔有人家");
+		user.setEmail("1012323@163.com");
+		user.setHead_img("123123132_123123.jpg");
+//		user.setPhonenumber("18945464564");
+        user.setUsername("fengjinman");
+        user.setNickname("无敌");
+		Result result = userService.addSelfInfo(user);
+		log.info(result.toString());
+
+	}
 	@Test
 	public void contextLoads() {
 

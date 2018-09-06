@@ -18,18 +18,7 @@ public interface UserDao {
 
     int insertUser(User user);
 
-    /**
-     * 从test1数据源中获取用户信息
-     */
-    User selectByOddUserId(Integer id);
-    /**
-     * 从test2数据源中获取用户信息
-     */
-    @TargetDataSource("test2")
-    User selectByEvenUserId(Integer id);
+    int updateInfoByUser(User user);
 
-
-    @TargetDataSource("test3")
-    User queryUserById(Integer id);
 
 }

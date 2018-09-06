@@ -2,6 +2,7 @@ package com.example.demo;
 import org.junit.Test;
 
 import java.text.DecimalFormat;
+import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
 import java.util.*;
 import java.util.stream.Stream;
@@ -16,6 +17,12 @@ public class TestCode {
         DecimalFormat d = new DecimalFormat("0.00");
         String format = d.format(Double.parseDouble(skuprice));
         System.out.println(format);
+    }
+    @Test
+    public void test62(){
+        long a = 1536042634*1000;
+        Date date = new Date(1536042634);
+        System.out.println(date);
     }
     @Test
     public void test1(){

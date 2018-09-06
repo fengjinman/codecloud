@@ -18,17 +18,7 @@ public class AppTest {
 
     @Test
     public void testDynamicDatasource() {
-        System.out.println(dao);
-        User user = dao.selectByOddUserId(48);
-        System.out.println(user);
-        User user1 = dao.selectByEvenUserId(1);
-        User user2 = dao.selectByEvenUserId(2);
-        User user3 = dao.selectByEvenUserId(3);
-        System.out.println(user1);
-        System.out.println(user2);
-        System.out.println(user3);
-        User user4 = dao.queryUserById(3);
-        System.out.println(user4);
+
     }
 }
 

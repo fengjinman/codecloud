@@ -11,4 +11,6 @@ public interface UserService {
     Result checkUser(User user);
 
     Result registOneUser(User user);
+
+    Result addSelfInfo(User user);
 }

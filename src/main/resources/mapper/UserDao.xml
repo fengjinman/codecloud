@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>   
 <!DOCTYPE mapper   
 PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"  
-"http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.example.demo.dao.UserDao">
 	<select id="queryAll" resultType="com.example.demo.entity.User">
 		select * from User
@@ -12,14 +12,28 @@ PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
 	<insert id="insertUser" >
 		insert into user(username,password) values(#{username},#{password})
 	</insert>
-	<!--测试-->
-	<select id="selectByOddUserId" resultType="com.example.demo.entity.User">
-		select * from user where id = #{id}
-	</select>
-	<select id="selectByEvenUserId" resultType="com.example.demo.entity.User">
-		select * from user where id = #{id}
-	</select>
-	<select id="queryUserById" resultType="com.example.demo.entity.User">
-		select * from user where id = #{id}
-	</select>
+	<update id="updateInfoByUser" parameterType="com.example.demo.entity.User">
+        update user set
+		<trim prefix="set" suffixOverrides=",">
+		<if test="password!=null" >
+            password = #{password},
+		</if>
+        <if test="email!=null">
+			email = #{email},
+		</if>
+        <if test="phonenumber!=null">
+			phonenumber = #{phonenumber},
+		</if>
+        <if test="address!=null">
+			address = #{address},
+		</if>
+        <if test="head_img!=null">
+			head_img = #{head_img},
+		</if>
+        <if test="nickname!=null">
+			nickname = #{nickname},
+		</if>
+		</trim>
+        where username = #{username}
+	</update>
 </mapper>
