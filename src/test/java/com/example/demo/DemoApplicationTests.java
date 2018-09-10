@@ -39,7 +39,7 @@ public class DemoApplicationTests {
 		user.setAddress("流沙河畔有人家");
 		user.setEmail("1012323@163.com");
 		user.setHead_img("123123132_123123.jpg");
-//		user.setPhonenumber("18945464564");
+		user.setPhonenumber("18945464564");
         user.setUsername("fengjinman");
         user.setNickname("无敌");
 		Result result = userService.addSelfInfo(user);

@@ -18,12 +18,35 @@ import javax.servlet.http.HttpSession;
 @Slf4j
 public class LoginController {
 
-    //    使用注解代替的传统方法
+    //    使用@Slf4j注解代替
     //    Logger log = LoggerFactory.getLogger(LoginController.class);
 
     @Autowired
     UserService service;
 
+    /**
+     1  首页
+     */
+    @RequestMapping("/index")
+    public String index(){
+        log.info("----有人访问了我写的网站----");
+        return "index";
+    }
+
+
+    /**
+     2   在首页上点击登陆，跳转到登陆页面
+     */
+    @RequestMapping("/loginPage")
+    public String loginPage(){
+        log.info("----前往登录页----");
+        return "login";
+    }
+
+
+    /**
+     3   登陆
+     */
     @ResponseBody
     @RequestMapping(value="/login",method= RequestMethod.POST)
     public Result login(@RequestParam("username")String username, @RequestParam("password")String password, HttpSession se, HttpServletResponse response){
@@ -50,22 +73,13 @@ public class LoginController {
         return re;
     }
 
+
+    /**
+     4  登陆成功后的欢迎页
+     */
     @RequestMapping("/welcome")
     public String welcome(ModelMap map){
         map.addAttribute("username","fengjinman");
         return "welcome";
-    }
-
-    @RequestMapping("/index")
-    public String index(){
-        log.info("----有人访问了我写的网站----");
-        return "index";
-    }
-
-
-    @RequestMapping("/loginPage")
-    public String loginPage(){
-        log.info("----前往登录页----");
-        return "login";
     }
 }

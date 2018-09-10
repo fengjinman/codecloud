@@ -26,8 +26,6 @@ public interface DeleteDao {
     @TargetDataSource("test2")
     int deleteSku(Integer skuid);
 
-
-
     //批量
     @TargetDataSource("test2")
     int deleteClassByList(List<Integer> classids);

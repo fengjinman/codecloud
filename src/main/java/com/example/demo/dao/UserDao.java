@@ -1,10 +1,8 @@
 package com.example.demo.dao;
 
-import com.example.demo.datasource.TargetDataSource;
 import com.example.demo.entity.User;
 import org.apache.ibatis.annotations.Mapper;
 
-import java.util.List;
 
 /**
  * Created by fengjinman Administrator on 2018/8/16.
@@ -12,12 +10,15 @@ import java.util.List;
 @Mapper
 public interface UserDao {
 
-    List<User> queryAll();
+
 
     User queryUser(User user);
 
     int insertUser(User user);
 
+    /**
+     * 向用户表添加详细信息
+     */
     int updateInfoByUser(User user);
 
 

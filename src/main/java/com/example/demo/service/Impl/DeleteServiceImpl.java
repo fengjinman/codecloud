@@ -6,21 +6,26 @@ import com.example.demo.service.DeleteService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 
 /**
- * Created by fengjinman Administrator on 2018/9/6.
+ * 将系统中删除操作统一管理
+ * 当前：分类、品牌、商品、库存单元 的单条删除  和批量删除
  */
 @Slf4j
 @Service
 public class DeleteServiceImpl implements DeleteService{
 
 
+
+
     @Autowired
     DeleteDao dao;
 
 
+    /**
+     单条
+     */
     @Override
     public Result deleteClass(Integer classid) {
         Result re = new Result();
@@ -34,6 +39,7 @@ public class DeleteServiceImpl implements DeleteService{
         }
         return re;
     }
+
 
     @Override
     public Result deleteBrand(Integer brandid) {
@@ -91,6 +97,10 @@ public class DeleteServiceImpl implements DeleteService{
         return re;
     }
 
+
+    /**
+     批量
+     */
     @Override
     public Result deleteClassByList(List<Integer> classids) {
         Result re = new Result();

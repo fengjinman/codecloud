@@ -12,10 +12,14 @@ import org.springframework.stereotype.Service;
 
 /**
  * Created by fengjinman Administrator on 2018/9/5.
+ *
+ * 发布之前查询 不存在则插入
  */
 @Slf4j
 @Service
 public class PublishServiceImpl implements PublishService{
+
+
     @Autowired
     PublishDao dao;
 

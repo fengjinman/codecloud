@@ -4,13 +4,15 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
-//异步多线程注解
+/**
+ 异步多线程注解
+ */
 @Async
 @Slf4j
 @Component
 public class ScheduledService {
     /**
-     * 三种不同的定时任务 我最喜欢第三种
+     * 三种不同的定时任务
      */
 //    @Scheduled(cron = "0/5 * * * * *")
 //    public void scheduled(){

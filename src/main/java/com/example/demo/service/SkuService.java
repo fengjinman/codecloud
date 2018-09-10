@@ -11,9 +11,18 @@ import java.util.Map;
  */
 public interface SkuService {
 
+    /**
+     *  添加一个库存单元
+     */
     Result addSku(Sku sku);
 
+    /**
+     *  批量查询商品  用于商品展示页面预加载
+     */
     List<Map<String,Object>> querySpuListByLook();
 
+    /**
+     *  批量查询sku  用于商品详情页面预加载
+     */
     List<Map<String,Object>> querySkuListByInfo(Integer spuid);
 }

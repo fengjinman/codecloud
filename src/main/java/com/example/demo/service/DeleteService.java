@@ -1,6 +1,5 @@
 package com.example.demo.service;
 
-import com.example.demo.datasource.TargetDataSource;
 import com.example.demo.entity.Result;
 
 import java.util.List;
@@ -10,6 +9,10 @@ import java.util.List;
  */
 public interface DeleteService {
 
+
+    /**
+     *  单条删除
+     */
     Result deleteClass(Integer classid);
 
     Result deleteBrand(Integer brandid);
@@ -20,6 +23,9 @@ public interface DeleteService {
 
     Result deleteSku(Integer skuid);
 
+    /**
+     *  批量删除
+     */
     Result deleteClassByList(List<Integer> classids);
 
     Result deleteBrandByList(List<Integer> brandids);

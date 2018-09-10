@@ -18,7 +18,11 @@ import java.lang.reflect.Method;
 @Aspect
 @Slf4j
 public class DataSourceAspect {
-    //切换放在mapper接口的方法上，所以这里要配置AOP切面的切入点
+
+
+    /**
+     * 切换放在mapper接口的方法上，所以这里要配置AOP切面的切入点
+     */
     @Pointcut("execution( * com.example.demo.dao.*.*(..))")
     public void dataSourcePointCut() {
     }
@@ -45,7 +49,10 @@ public class DataSourceAspect {
         }
     }
 
-    //执行完切面后，将线程共享中的数据源名称清空
+    /**
+     * 执行完切面后，将线程共享中的数据源名称清空
+     * @param joinPoint
+     */
     @After("dataSourcePointCut()")
     public void after(JoinPoint joinPoint){
         DynamicDataSourceHolder.removeDataSource();

@@ -19,27 +19,34 @@ public class DeleteController {
     DeleteService service;
 
 
+    /**
+     * 单个删除
+     */
     @RequestMapping("/class")
     public Result deleteClass(Integer classid){
         return service.deleteClass(classid);
     }
     @RequestMapping("/brand")
     public Result deleteBrand(Integer brandid){
-        return service.deleteClass(brandid);
+        return service.deleteBrand(brandid);
     }
     @RequestMapping("/spu")
     public Result deleteSpu(Integer spuid){
-        return service.deleteClass(spuid);
+        return service.deleteSpu(spuid);
     }
     @RequestMapping("/attr")
     public Result deleteAttr(Integer attrid){
-        return service.deleteClass(attrid);
+        return service.deleteAttr(attrid);
     }
     @RequestMapping("/sku")
     public Result deleteSku(Integer skuid){
-        return service.deleteClass(skuid);
+        return service.deleteSku(skuid);
     }
 
+
+    /**
+     * 批量删除
+     */
     @RequestMapping("/class/list")
     public Result deleteClassByList(String ids){
 
@@ -76,6 +83,9 @@ public class DeleteController {
         return service.deleteSkuByList(idList);
     }
 
+    /**
+     * 批量删除的共用方法
+     */
     public List<Integer> getIds(String ids){
 
         List<Integer> idList = new ArrayList<>();

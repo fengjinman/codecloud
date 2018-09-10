@@ -27,12 +27,25 @@ public class PublishController {
     @Autowired
     PublishService service;
 
+    /**
+     *  上传到服务器上的存储路径  在配置文件中分为本地和线上两种 需要切换
+     */
+    @Value("${photoPath}")
+    String photoPath;
+
+
+    /**
+     *  1 新加一个分类
+     */
     @RequestMapping("/class")
     public Result publishClass(String classname){
         Result re = service.addClass(classname);
         return re;
     }
 
+    /**
+     *  2 新加一个品牌
+     */
     @RequestMapping("/brand")
     public Result publishBrand(@RequestParam("classid")Integer classid,
                                @RequestParam("brandname")String brandname){
@@ -43,10 +56,16 @@ public class PublishController {
         return re;
     }
 
+    /**
+     *  3 新加一个商品
+     */
     @RequestMapping("/spu")
     public Result publishSpu(@RequestParam("brandid")Integer brandid,
                              @RequestParam("classid")Integer classid,
                              @RequestParam("spuname")String spuname,
+                             @RequestParam("describtion")String describtion,
+                             @RequestParam("price")String price,
+                             @RequestParam("unit")String unit,
                              @RequestParam("img")MultipartFile img){
         String originalFilename = img.getOriginalFilename();
         String spu_img = System.currentTimeMillis()+"_spu_"+originalFilename;
@@ -61,24 +80,19 @@ public class PublishController {
         spu.setBrandid(brandid);
         spu.setClassid(classid);
         spu.setSpuname(spuname);
+        spu.setDescribtion(describtion);
+        spu.setPrice(price);
+        spu.setUnit(unit);
         spu.setImg(spu_img);
 
         Result re = service.addSpu(spu);
         return re;
     }
 
-//    int spuid;
-//
-//    String color;
-//
-//    String size;
-//
-//    String size_unit;
-//
-//    String attr_img;
-    @Value("${photoPath}")
-    String photoPath;
 
+    /**
+     *  4 新加一个属性
+     */
     @RequestMapping("/attr")
     public Result publishAttr(@RequestParam("spuid")Integer spuid,
                               @RequestParam("color")String color,

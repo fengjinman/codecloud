@@ -8,9 +8,19 @@ import com.example.demo.entity.User;
  */
 public interface UserService {
 
+    /**
+     *   检查数据库中是否存在指定用户
+     */
     Result checkUser(User user);
 
+    /**
+     *   注册一个用户
+     */
     Result registOneUser(User user);
 
+
+    /**
+     *   为当前已经存在的用户添加个人信息
+     */
     Result addSelfInfo(User user);
 }

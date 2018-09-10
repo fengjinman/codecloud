@@ -9,7 +9,6 @@ import com.example.demo.service.SkuService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.*;
 
 /**
@@ -28,10 +27,11 @@ public class SkuServiceImpl implements SkuService {
      */
 
     /**
-     * 最主要的是颜色全部列出，尺码全部列出，图片全部列出
+     * 查询sku
      */
     @Override
     public List<Map<String, Object>> querySkuListByInfo(Integer spuid) {
+        log.info("-------进行详细信息的数据查询(详情)------");
         List<Map<String,Object>> list = new ArrayList<>();
         List<Sku> skuList = dao.querySkuListByInfo(spuid);
         Iterator<Sku> it = skuList.iterator();
@@ -53,15 +53,16 @@ public class SkuServiceImpl implements SkuService {
             map.put("size_unit",attr.getSize());
             list.add(map);
         }
+        log.info("-------查询结束------");
         return list;
     }
 
     /**
-     * 除了sku的部分属性
-     * 还要品牌和商品图片
+     * 查询spu
      */
     @Override
     public List<Map<String, Object>> querySpuListByLook() {
+        log.info("-------查询spu(商品展示)--------");
         List<Spu> spuList = dao.querySpuListByLook();
         List<Map<String,Object>> list = new ArrayList<>();
         Iterator<Spu> it = spuList.iterator();
@@ -78,9 +79,13 @@ public class SkuServiceImpl implements SkuService {
             map.put("spuid",spu.getId());
             list.add(map);
         }
+        log.info("-------查询结束--------");
         return list;
     }
 
+    /**
+     *  添加库存单元
+     */
     @Override
     public Result addSku(Sku sku) {
 

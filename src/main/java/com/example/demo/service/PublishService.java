@@ -9,7 +9,9 @@ import com.example.demo.entity.Spu;
  * Created by fengjinman Administrator on 2018/9/5.
  */
 public interface PublishService {
-
+     /**
+      *  后台设置商品上传
+      */
      Result addClass(String classname);
 
      Result addBrand(Brand brand);
@@ -17,8 +19,5 @@ public interface PublishService {
      Result addSpu(Spu spu);
 
      Result addAttr(Attr attr);
-
-
-
 
 }

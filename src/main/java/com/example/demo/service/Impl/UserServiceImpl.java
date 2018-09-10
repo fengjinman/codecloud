@@ -17,11 +17,14 @@ import org.springframework.stereotype.Service;
 @Slf4j
 public class UserServiceImpl implements UserService {
 
-//    Logger log = LoggerFactory.getLogger(UserServiceImpl.class);
 
     @Autowired
     UserDao dao;
 
+
+    /**
+     * 完善个人信息
+     */
     @Override
     public Result addSelfInfo(User user) {
         Result re = new Result();
@@ -41,6 +44,9 @@ public class UserServiceImpl implements UserService {
         return re;
     }
 
+    /**
+     *  注册一个用户
+     */
     @Override
     public Result registOneUser(User user) {
         Result re = new Result();
@@ -65,6 +71,9 @@ public class UserServiceImpl implements UserService {
         return re;
     }
 
+    /**
+     *  登陆时验证密码
+     */
     @Override
     public Result checkUser(User user) {
         log.info("------查询数据库-----");

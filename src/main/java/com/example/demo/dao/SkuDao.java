@@ -27,8 +27,6 @@ public interface SkuDao {
     @TargetDataSource("test2")
     List<Sku> querySkuListByInfo(Integer skuid);
 
-    @TargetDataSource("test2")
-    String getPhoto(Integer spuid);
 
     @TargetDataSource("test2")
     String getBrand(Integer brandid);

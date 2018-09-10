@@ -18,12 +18,22 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Slf4j
 public class RegistController {
 
-//    Logger log = LoggerFactory.getLogger(RegistController.class);
 
     @Autowired
     UserService service;
 
+    /**
+     *  1  注册页面
+     */
+    @RequestMapping("/toRegist")
+    public String toRegist(){
+        return "registPage";
+    }
 
+
+    /**
+     *  2  注册
+     */
     @RequestMapping("/regist")
     public String regist(@RequestParam("username")String username,@RequestParam("password")String password){
         log.info("-------用户注册-------");

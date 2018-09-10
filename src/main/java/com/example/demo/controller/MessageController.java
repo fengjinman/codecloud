@@ -1,6 +1,7 @@
 package com.example.demo.controller;
 import com.example.demo.entity.Result;
 import com.example.demo.service.SendMessage;
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
@@ -17,14 +18,25 @@ import java.util.Map;
  * Created by fengjinman Administrator on 2018/8/24.
  * 短信群发的处理目前已经完成了大部分，差api的调用
  */
+@Slf4j
 @Controller
 public class MessageController {
 
-    Logger log = LoggerFactory.getLogger(MessageController.class);
 
     @Resource
     private SendMessage sendMessage;
 
+    /**
+     * 1  跳转到短信信息填写页面
+     */
+    @RequestMapping("/message")
+    public String message(){
+        return "message";
+    }
+
+    /**
+     * 2  发送短信
+     */
     @ResponseBody
     @RequestMapping("/sendMessage")
     public Result sendMessage(@RequestParam("manlist")String manlist, @RequestParam("message")String message){
@@ -47,10 +59,7 @@ public class MessageController {
         return re;
     }
 
-    @RequestMapping("/message")
-    public String message(){
-        return "message";
-    }
+
 
 
 }

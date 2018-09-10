@@ -62,6 +62,9 @@ public class SkuController {
     }
 
 
+    /**
+     * 新建一个库存单元
+     */
     @ResponseBody
     @RequestMapping(value="/add/sku")
     public Result upload(@RequestParam("skuname")String skuname,
