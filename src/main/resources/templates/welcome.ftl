@@ -11,6 +11,8 @@
     welcome! ${username}
     <br>
     <a href="${ctx}/message">群发短信</a><br>
-    <a href="${ctx}/makeSkuPage">商品发布</a>
+    <a href="${ctx}/makeSkuPage">商品发布</a><br>
+    <a href="${ctx}/spulook">商品展示</a><br>
+
 </body>
 </html>

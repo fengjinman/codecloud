@@ -82,7 +82,7 @@
 <#--</form>-->
 
 <#--</div>-->
-<div class="container" style="background-color: #9acfea" >
+<div class="container" style="" >
 
     <form class="form-signin" >
         <h2 class="form-signin-heading">Please sign in</h2>

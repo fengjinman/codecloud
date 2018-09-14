@@ -2,18 +2,14 @@ package com.example.demo.controller;
 import com.example.demo.entity.Result;
 import com.example.demo.service.SendMessage;
 import lombok.extern.slf4j.Slf4j;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import javax.annotation.Resource;
-import javax.servlet.http.HttpSession;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
+
 /**
  * Created by fengjinman Administrator on 2018/8/24.
  * 短信群发的处理目前已经完成了大部分，差api的调用

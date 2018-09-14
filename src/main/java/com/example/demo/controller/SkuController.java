@@ -13,7 +13,6 @@ import javax.servlet.http.HttpSession;
 import java.text.DecimalFormat;
 import java.util.List;
 import java.util.Map;
-
 /**
  * Created by fengjinman Administrator on 2018/9/5.
  */
@@ -42,7 +41,7 @@ public class SkuController {
 //    String stock_count;
 
     /**
-     * 商品展示页
+     * 商品展示页数据
      */
     @ResponseBody
     @RequestMapping("/spu/look")
@@ -52,13 +51,29 @@ public class SkuController {
     }
 
     /**
-     * 商品详情页
+     *  商品展示页
+     */
+    @RequestMapping("/spulook")
+    public String spulook(){
+        return "spulook";
+    }
+
+    /**
+     * 商品详情页数据
      */
     @ResponseBody
     @RequestMapping("/sku/info")
     public Object querySkuListByInfo(Integer spuid){
         List<Map<String,Object>> list = service.querySkuListByInfo(spuid);
         return list;
+    }
+
+    /**
+     *  商品详情页
+     */
+    @RequestMapping("/skuinfo")
+    public String skuinfo(){
+        return "skuinfo";
     }
 
 
