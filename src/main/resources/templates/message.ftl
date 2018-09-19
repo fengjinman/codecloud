@@ -6,7 +6,7 @@
     <title>短信群发</title>
 </head>
 <body>
-    <script src="../jquery-1.7.2.min.js"></script>
+    <script src="../jquery-3.0.0.min.js"></script>
     <script>
 
         function sendajax(){

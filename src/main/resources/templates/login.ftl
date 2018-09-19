@@ -21,11 +21,9 @@
 <#--<link href="signin.css" rel="stylesheet">-->
 
     <!-- Bootstrap -->
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-<script src="../jquery-1.7.2.min.js"></script>
-<link href="../js/bootstrap.min.js">
+<script src="../jquery-3.0.0.min.js"></script>
 <script>
     /**
      * js大坑记录：
@@ -74,31 +72,15 @@
         }
     }
 </script>
-<#--<div align="center" style="margin-top: 300px">-->
-<#--<form id="formId" action="http://${ctx}:8888/login">-->
-<#--账号：<input  id="username" name="username" value="fengjinman" /><br><br>-->
-<#--密码：<input  id="password" name="password" value="dashuaige" /><br><br>-->
-<#--<button type="button" class="btn btn-lg btn-success" onclick="sendajax()">点击登录</button>-->
-<#--</form>-->
-
-<#--</div>-->
-<div class="container" style="" >
-
-    <form class="form-signin" >
-        <h2 class="form-signin-heading">Please sign in</h2>
-        <label for="username" class="sr-only">username</label>
-        <input type="text" id="username" class="form-control" placeholder="username" style="width: auto" value="fengjinman" required="" autofocus="">
-        <label for="password" class="sr-only">Password</label>
-        <input type="password" id="password" class="form-control" placeholder="password" style="width: auto" value="dashuaige" required="">
-        <div class="checkbox">
-            <label>
-                <input type="checkbox" value="remember-me"> Remember me
-            </label>
-        </div>
-        <button class="btn btn-md btn-success" style="width: auto" type="button" onclick="sendajax()">Sign in</button>
-    </form>
+<div align="center" style="margin-top: 300px">
+<form id="formId" action="http://${ctx}:8888/login">
+账号：<input  id="username" name="username" value="fengjinman" /><br><br>
+密码：<input  id="password" name="password" value="dashuaige" /><br><br>
+<button type="button" class="btn btn-lg btn-success" onclick="sendajax()">点击登录</button>
+</form>
 
 </div>
+
 
 
 </body>

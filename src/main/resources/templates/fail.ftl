@@ -6,7 +6,7 @@
 </head>
 <body>
      fail!
-     <script src="../jquery-1.7.2.min.js"></script>
+     <script src="../jquery-3.0.0.min.js"></script>
      <script>
          window.onload=function () {
               alert("babbab！");

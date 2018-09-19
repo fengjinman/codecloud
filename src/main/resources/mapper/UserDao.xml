@@ -10,7 +10,7 @@ PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
 		select * from user where username = #{username}
 	</select>
 	<insert id="insertUser" >
-		insert into user(username,password) values(#{username},#{password})
+		insert into user(username,password,email) values(#{username},#{password},#{email})
 	</insert>
 	<update id="updateInfoByUser" parameterType="com.example.demo.entity.User">
         update user set
