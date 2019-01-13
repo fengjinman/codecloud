@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <#assign ctx = request.contextPath />
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>First page</title>
+    <title>index</title>
 </head>
 <body>
-    <script src="../jquery-3.0.0.min.js"></script>
 
-    <div style="margin-top: 100px;margin-left: 50px">
-    <button type="button"  class="btn btn-lg btn-default"><a href="${ctx}/loginPage">登陆</a></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <button type="button"  class="btn btn-lg btn-default"><a href="${ctx}/toRegist">注册</a></button>
+<button type="button"  class="btn btn-lg btn-default"><a href="/loginPage">登陆</a></button><br>
+<button type="button"  class="btn btn-lg btn-default"><a href="/toRegist">注册</a></button><br>
+里面有定时任务  配置了多数据源切换  拦截器 aop日志 redis
+redis没安装
+要加的：事务
+<script src="../jquery-3.0.0.min.js"></script>
+<script>
 
-
+</script>
 </body>
 </html>
