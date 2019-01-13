@@ -9,14 +9,17 @@ public class DynamicDataSourceHolder {
      */
     private static final ThreadLocal<String> THREAD_LOCAL = new ThreadLocal<>();
 
+    //增
     public static void putDataSource(String name) {
         THREAD_LOCAL.set(name);
     }
 
+    //查
     public static String getDataSource() {
         return THREAD_LOCAL.get();
     }
 
+    //删
     public static void removeDataSource() {
         THREAD_LOCAL.remove();
     }
