@@ -51,7 +51,7 @@ public class RedisConfig extends CachingConfigurerSupport {
     //缓存管理器
 
     /**
-     * 出现了一个版本问题，如果springboot版本超过2  如下方创建RedisCacheManager对象
+     * 出现了一个版本问题，如果springboot版本超过2X  如下方创建RedisCacheManager对象
      * @param redisConnectionFactory
      * @return
      */

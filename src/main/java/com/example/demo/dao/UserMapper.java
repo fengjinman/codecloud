@@ -7,6 +7,7 @@ import org.springframework.cache.annotation.CacheConfig;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.CachePut;
 import org.springframework.cache.annotation.Cacheable;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -21,6 +22,11 @@ import java.util.List;
 @Mapper
 public interface UserMapper {
 
+    /**
+     * 储存格式："user::1"
+     * @param id
+     * @return
+     */
     @Select("select * from user where id =#{id}")
     @Cacheable(key ="#p0")
     User findById(@Param("id") String id);
