@@ -10,6 +10,7 @@
 
 <button type="button"  class="btn btn-lg btn-default"><a href="/loginPage">登陆</a></button><br>
 <button type="button"  class="btn btn-lg btn-default"><a href="/toRegist">注册</a></button><br>
+<button type="button"  class="btn btn-lg btn-default"><a href="/videoPage">视频解析页面</a></button><br>
 里面有定时任务  配置了多数据源切换  拦截器 aop日志 redis
 redis没安装
 要加的：事务
